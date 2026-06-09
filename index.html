@@ -6,9 +6,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
 :root{
- --bg:#0B0A1F;--bg2:#13112E;--panel:#191642;--panel2:#211C57;--line:#2E2A66;
- --cyan:#26E0F2;--pink:#FF4D9D;--green:#39E66B;--yellow:#FFE14D;--purple:#9B6CFF;--red:#FF4D5E;
- --ink:#ECEAFF;--mut:#A9A4D6;--r:18px;
+ --bg:#FBF6FF;--bg2:#F0E7FB;--panel:#FFFFFF;--panel2:#F5EEFD;--line:#E9DEF5;
+ --cyan:#16AEC9;--pink:#FF4D9D;--green:#22B36A;--yellow:#F2A100;--purple:#8B5CF6;--red:#FF5A6A;
+ --ink:#3A2C58;--mut:#8B82A6;--r:18px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -17,9 +17,9 @@ body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--bg);over
 body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:
  radial-gradient(60% 50% at 50% 0%, rgba(155,108,255,.18), transparent 60%),
  radial-gradient(50% 40% at 90% 20%, rgba(38,224,242,.12), transparent 60%),
- linear-gradient(180deg,#0B0A1F,#0E0C26 60%,#0B0A1F)}
+ linear-gradient(180deg,#FBF6FF,#F3ECFF 60%,#FBF6FF)}
 body::after{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.5;
- background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 1px,transparent 1px 3px)}
+ background:repeating-linear-gradient(0deg,rgba(120,90,170,.05) 0 1px,transparent 1px 3px)}
 h1,h2,h3{font-family:'Orbitron',sans-serif;letter-spacing:.5px;line-height:1.05}
 .lab{font-family:'Rajdhani',sans-serif;text-transform:uppercase;letter-spacing:.18em;font-weight:700}
 a{color:inherit;text-decoration:none} img{display:block;max-width:100%} button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
@@ -28,14 +28,14 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%} button{f
 .neon{text-shadow:0 0 8px currentColor,0 0 22px currentColor}
 
 /* ticker */
-.ticker{background:#06050F;border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;position:relative;z-index:40}
+.ticker{background:var(--bg2);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;position:relative;z-index:40}
 .tk{display:inline-block;padding:8px 0;animation:tk 26s linear infinite}
 .tk span{margin:0 26px;font-family:'Rajdhani';font-weight:700;letter-spacing:.14em;font-size:.82rem;color:var(--cyan)}
 .tk b{color:var(--pink)}
 @keyframes tk{to{transform:translateX(-50%)}}
 
 /* header */
-header{position:sticky;top:0;z-index:45;background:rgba(11,10,31,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:45;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;gap:16px;height:74px}
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .logo .lw{background:#fff;border-radius:12px;padding:5px 9px;box-shadow:0 0 0 2px var(--pink),0 0 16px rgba(255,77,157,.55)}
@@ -75,21 +75,21 @@ header{position:sticky;top:0;z-index:45;background:rgba(11,10,31,.78);backdrop-f
 .coinrow{display:inline-flex;align-items:center;gap:9px;background:rgba(255,225,77,.08);border:1px solid var(--yellow);color:var(--yellow);padding:7px 14px;border-radius:999px;font-family:'Rajdhani';font-weight:700;letter-spacing:.12em;font-size:.78rem;margin-bottom:20px}
 .coinrow .ic{width:16px;height:16px;animation:flip 2s linear infinite}
 @keyframes flip{50%{transform:rotateY(180deg)}}
-.hero h1{font-size:clamp(2.4rem,5.4vw,4.2rem);font-weight:900;color:#fff;text-shadow:0 0 14px rgba(38,224,242,.5)}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4.2rem);font-weight:900;color:var(--ink);text-shadow:0 0 10px rgba(22,174,201,.2)}
 .hero h1 em{font-style:normal;color:var(--cyan);display:block}
 .hero h1 .pk{color:var(--pink)}
 .hero p.lead{font-size:1.08rem;color:var(--mut);font-weight:500;margin:18px 0 26px;max-width:480px}
 .cta{display:flex;gap:13px;flex-wrap:wrap}
 .hstat{display:flex;gap:14px;margin-top:30px}
 .hstat .s{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:92px}
-.hstat b{font-family:'Orbitron';font-weight:800;font-size:1.4rem;color:var(--green);display:block;line-height:1;text-shadow:0 0 10px rgba(57,230,107,.5)}
+.hstat b{font-family:'Orbitron';font-weight:800;font-size:1.4rem;color:var(--green);display:block;line-height:1;text-shadow:0 0 7px rgba(34,179,106,.25)}
 .hstat span{font-family:'Rajdhani';font-weight:600;letter-spacing:.1em;font-size:.72rem;color:var(--mut)}
 /* hero console art */
 .console{position:relative}
-.screen{background:var(--panel);border:2px solid var(--cyan);border-radius:20px;padding:14px;box-shadow:0 0 0 4px #06050F,0 0 40px rgba(38,224,242,.35);position:relative;overflow:hidden}
+.screen{background:var(--panel);border:2px solid var(--cyan);border-radius:20px;padding:14px;box-shadow:0 0 0 3px var(--line),0 18px 44px -18px rgba(110,70,170,.28);position:relative;overflow:hidden}
 .screen::before{content:"BEST SELLER";position:absolute;top:10px;left:16px;font-family:'Press Start 2P';font-size:8px;color:var(--green);z-index:3}
 .screen::after{content:"TOP PICK";position:absolute;top:10px;right:16px;font-family:'Press Start 2P';font-size:8px;color:var(--yellow);z-index:3}
-.screen .frame{border-radius:12px;overflow:hidden;margin-top:18px;position:relative;background:#06050F}
+.screen .frame{border-radius:12px;overflow:hidden;margin-top:18px;position:relative;background:var(--panel2)}
 .screen .frame img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
 .screen .scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);pointer-events:none}
 .dpad{position:absolute;bottom:-22px;left:-22px;width:80px;height:80px;z-index:4;color:var(--pink);filter:drop-shadow(0 0 12px rgba(255,77,157,.6));animation:bobj 4s ease-in-out infinite}
@@ -102,8 +102,8 @@ header{position:sticky;top:0;z-index:45;background:rgba(11,10,31,.78);backdrop-f
 
 /* hero featured carousel */
 .herocap{margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
-.herocap b{font-family:'Poppins';font-weight:700;font-size:.9rem;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.herocap span{font-family:'Orbitron';font-weight:800;color:var(--cyan);text-shadow:0 0 10px rgba(38,224,242,.55);white-space:nowrap}
+.herocap b{font-family:'Poppins';font-weight:700;font-size:.9rem;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.herocap span{font-family:'Orbitron';font-weight:800;color:var(--cyan);text-shadow:0 0 7px rgba(22,174,201,.25);white-space:nowrap}
 .herostrip{display:flex;gap:8px;margin-top:10px}
 .hthumb{flex:1;aspect-ratio:1;border-radius:10px;overflow:hidden;background:#fff;border:2px solid var(--line);transition:.18s;cursor:pointer;padding:0}
 .hthumb img{width:100%;height:100%;object-fit:cover}
@@ -122,8 +122,8 @@ header{position:sticky;top:0;z-index:45;background:rgba(11,10,31,.78);backdrop-f
 .hnav:hover{border-color:var(--cyan);box-shadow:0 0 12px rgba(38,224,242,.5)}
 @media(max-width:600px){.hnav{width:32px;height:32px}}
 /* neon text glow */
-.head h2{text-shadow:0 0 18px color-mix(in srgb,var(--ac) 55%,transparent);animation:hpulse 3.6s ease-in-out infinite}
-@keyframes hpulse{0%,100%{text-shadow:0 0 14px color-mix(in srgb,var(--ac) 38%,transparent)}50%{text-shadow:0 0 30px color-mix(in srgb,var(--ac) 80%,transparent),0 0 50px color-mix(in srgb,var(--ac) 32%,transparent)}}
+.head h2{text-shadow:0 0 10px color-mix(in srgb,var(--ac) 28%,transparent);animation:hpulse 3.6s ease-in-out infinite}
+@keyframes hpulse{0%,100%{text-shadow:0 0 8px color-mix(in srgb,var(--ac) 20%,transparent)}50%{text-shadow:0 0 16px color-mix(in srgb,var(--ac) 42%,transparent),0 0 26px color-mix(in srgb,var(--ac) 16%,transparent)}}
 /* trust strip: staggered reveal + hover */
 .tg.reveal{opacity:1;transform:none}
 .tg .t{opacity:0;transform:translateY(22px) scale(.96)}
@@ -137,16 +137,16 @@ header{position:sticky;top:0;z-index:45;background:rgba(11,10,31,.78);backdrop-f
 .trust .t:hover .tic{color:var(--green);filter:drop-shadow(0 0 9px var(--green))}
 @media(prefers-reduced-motion:reduce){.head h2,.hero h1{animation:none}.tg .t{opacity:1;transform:none;animation:none}}
 .head .tag{text-shadow:0 0 10px color-mix(in srgb,var(--ac) 45%,transparent)}
-.pr b{text-shadow:0 0 10px rgba(38,224,242,.45)}
+.pr b{text-shadow:0 0 7px rgba(22,174,201,.2)}
 .hero h1{animation:hglow 3.4s ease-in-out infinite}
-@keyframes hglow{0%,100%{text-shadow:0 0 14px rgba(38,224,242,.45)}50%{text-shadow:0 0 28px rgba(38,224,242,.85),0 0 46px rgba(155,108,255,.4)}}
+@keyframes hglow{0%,100%{text-shadow:0 0 10px rgba(22,174,201,.22)}50%{text-shadow:0 0 16px rgba(22,174,201,.34),0 0 26px rgba(139,92,246,.18)}}
 /* typewriter caret */
 .tw{min-height:1.25em}
 .cursor{display:inline-block;width:.55ch;height:1.02em;background:var(--cyan);margin-left:3px;vertical-align:-2px;border-radius:1px;box-shadow:0 0 8px var(--cyan);animation:cb .7s steps(1) infinite}
 @keyframes cb{50%{opacity:0}}
 
 /* trust */
-.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#06050F}
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
 .tg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px 0}
 .trust .t{display:flex;gap:13px;align-items:center}
 .trust .tic{width:40px;height:40px;color:var(--cyan);flex-shrink:0}
@@ -157,7 +157,7 @@ header{position:sticky;top:0;z-index:45;background:rgba(11,10,31,.78);backdrop-f
 section.block{padding:74px 0;position:relative}
 .head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:34px}
 .head .tag{font-family:'Rajdhani';font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.82rem;color:var(--ac)}
-.head h2{font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:800;margin-top:8px;color:#fff}
+.head h2{font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:800;margin-top:8px;color:var(--ink)}
 .head p{color:var(--mut);font-weight:500;margin-top:8px;max-width:430px}
 .alllink{font-family:'Orbitron';font-weight:800;font-size:.82rem;color:var(--ac);display:inline-flex;gap:7px;align-items:center;white-space:nowrap}
 .alllink svg{width:16px;height:16px;transition:.2s} .alllink:hover svg{transform:translateX(4px)}
@@ -172,7 +172,7 @@ section.block{padding:74px 0;position:relative}
 .card:hover .thumb img{transform:scale(1.07)}
 .cart-tag{position:absolute;top:10px;left:10px;font-family:'Press Start 2P';font-size:7px;background:#0B0A1F;color:var(--ac);padding:5px 8px;border-radius:6px;z-index:2;box-shadow:0 0 10px -2px var(--ac)}
 .off{position:absolute;top:10px;right:10px;font-family:'Orbitron';font-weight:800;font-size:.7rem;background:var(--yellow);color:#0B0A1F;padding:4px 8px;border-radius:6px;z-index:2;box-shadow:0 0 12px rgba(255,225,77,.6)}
-.wish{position:absolute;bottom:10px;right:10px;width:38px;height:38px;border-radius:10px;background:rgba(11,10,31,.7);border:1px solid var(--line);display:grid;place-items:center;color:var(--pink);z-index:2;transition:.18s;backdrop-filter:blur(4px)}
+.wish{position:absolute;bottom:10px;right:10px;width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.9);border:1px solid var(--line);display:grid;place-items:center;color:var(--pink);z-index:2;transition:.18s;backdrop-filter:blur(4px)}
 .wish svg{width:18px;height:18px;fill:none;stroke:var(--pink)} .wish.on svg{fill:var(--pink)}
 .wish:hover{transform:scale(1.12);box-shadow:0 0 14px rgba(255,77,157,.5)}
 .cbody{padding:14px 15px 16px}
@@ -195,11 +195,11 @@ section.block{padding:74px 0;position:relative}
 .deal{border:1px solid var(--yellow);border-radius:24px;padding:42px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
  background:radial-gradient(120% 140% at 0% 0%,rgba(255,225,77,.12),transparent 50%),var(--panel)}
 .deal .tag{color:var(--yellow)}
-.deal h2{font-size:clamp(1.8rem,4vw,3rem);color:#fff}
-.deal h2 span{color:var(--yellow);text-shadow:0 0 16px rgba(255,225,77,.6)}
+.deal h2{font-size:clamp(1.8rem,4vw,3rem);color:var(--ink)}
+.deal h2 span{color:var(--yellow)}
 .deal p{color:var(--mut);font-weight:500;margin:8px 0 18px}
 .timer{display:flex;gap:10px}
-.tcell{background:#06050F;border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center;min-width:64px}
+.tcell{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center;min-width:64px}
 .tcell b{font-family:'Orbitron';font-weight:800;font-size:1.7rem;color:var(--yellow);display:block;line-height:1}
 .tcell span{font-family:'Rajdhani';font-weight:600;font-size:.66rem;letter-spacing:.12em;color:var(--mut)}
 
@@ -209,9 +209,9 @@ section.block{padding:74px 0;position:relative}
 .pwr:hover{transform:translateY(-6px);border-color:var(--ac);box-shadow:0 0 24px -6px var(--ac)}
 .pwr .pic{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;color:var(--ac);background:color-mix(in srgb,var(--ac) 14%,transparent);margin-bottom:14px}
 .pwr .pic .big{width:28px;height:28px}
-.pwr h3{font-size:1.05rem;color:#fff}
+.pwr h3{font-size:1.05rem;color:var(--ink)}
 .pwr span{font-family:'Rajdhani';font-weight:600;color:var(--mut);font-size:.9rem;display:block;margin:4px 0 12px}
-.pwr .bar{height:8px;border-radius:6px;background:#06050F;overflow:hidden;border:1px solid var(--line)}
+.pwr .bar{height:8px;border-radius:6px;background:var(--panel2);overflow:hidden;border:1px solid var(--line)}
 .pwr .bar i{display:block;height:100%;background:var(--ac);box-shadow:0 0 10px var(--ac);border-radius:6px}
 .pwr small{font-family:'Press Start 2P';font-size:7px;color:var(--ac);display:block;margin-top:8px}
 
@@ -220,11 +220,11 @@ section.block{padding:74px 0;position:relative}
 .founder .fbar{width:100%}
 .founder .ftx{padding:40px 44px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
 .founder .tag{color:var(--pink);font-family:'Rajdhani';font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.82rem}
-.founder h2{font-size:clamp(1.6rem,3.2vw,2.4rem);margin:8px 0 14px;color:#fff}
+.founder h2{font-size:clamp(1.6rem,3.2vw,2.4rem);margin:8px 0 14px;color:var(--ink)}
 .founder p{color:var(--mut);font-weight:500;line-height:1.65}
 .founder .sign{font-family:'Orbitron';font-weight:800;color:var(--cyan);margin-top:16px;font-size:.95rem}
-.statbox{background:#06050F;border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center}
-.statbox .n{font-family:'Orbitron';font-weight:900;font-size:2.2rem;color:var(--green);text-shadow:0 0 12px rgba(57,230,107,.5)}
+.statbox{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center}
+.statbox .n{font-family:'Orbitron';font-weight:900;font-size:2.2rem;color:var(--green);text-shadow:0 0 8px rgba(34,179,106,.25)}
 .statbox .l{font-family:'Rajdhani';font-weight:600;letter-spacing:.1em;color:var(--mut);font-size:.78rem;margin-top:2px}
 .statbox hr{border:none;border-top:1px solid var(--line);margin:16px 0}
 
@@ -243,14 +243,14 @@ section.block{padding:74px 0;position:relative}
 .news{border:1px solid var(--purple);border-radius:24px;padding:50px;text-align:center;position:relative;overflow:hidden;
  background:radial-gradient(100% 120% at 50% 0%,rgba(155,108,255,.18),transparent 55%),var(--panel)}
 .news .nic{width:46px;height:46px;color:var(--purple);margin:0 auto 14px}
-.news h2{font-size:clamp(1.7rem,3.4vw,2.5rem);color:#fff}
+.news h2{font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--ink)}
 .news p{color:var(--mut);font-weight:500;margin:10px 0 22px}
 .nform{display:flex;gap:10px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-.nform input{flex:1;min-width:220px;padding:14px 18px;border-radius:12px;border:1px solid var(--line);background:#06050F;color:var(--ink);font-family:'Rajdhani';font-weight:600;font-size:1rem}
+.nform input{flex:1;min-width:220px;padding:14px 18px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--ink);font-family:'Rajdhani';font-weight:600;font-size:1rem}
 .nform input:focus{outline:none;border-color:var(--purple);box-shadow:0 0 16px rgba(155,108,255,.4)}
 
 /* footer */
-footer{background:#06050F;border-top:1px solid var(--line);padding:54px 0 26px;position:relative;z-index:1}
+footer{background:var(--bg2);border-top:1px solid var(--line);padding:54px 0 26px;position:relative;z-index:1}
 .fg{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px}
 .fa .lw{background:#fff;border-radius:12px;padding:8px 12px;display:inline-block;box-shadow:0 0 0 2px var(--pink)}
 .fa .lw img{height:42px}
@@ -258,7 +258,7 @@ footer{background:#06050F;border-top:1px solid var(--line);padding:54px 0 26px;p
 .soc{display:flex;gap:10px}
 .soc a{width:40px;height:40px;border-radius:11px;background:var(--panel);border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);transition:.18s}
 .soc a svg{width:18px;height:18px} .soc a:hover{color:var(--cyan);border-color:var(--cyan);box-shadow:0 0 14px rgba(38,224,242,.4)}
-.fc h4{font-family:'Orbitron';font-weight:800;font-size:.95rem;margin-bottom:14px;color:#fff}
+.fc h4{font-family:'Orbitron';font-weight:800;font-size:.95rem;margin-bottom:14px;color:var(--ink)}
 .fc a{display:block;color:var(--mut);font-family:'Rajdhani';font-weight:600;font-size:.92rem;padding:5px 0;transition:.18s}
 .fc a:hover{color:var(--cyan);transform:translateX(4px)}
 .fb{border-top:1px solid var(--line);margin-top:38px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
@@ -266,12 +266,12 @@ footer{background:#06050F;border-top:1px solid var(--line);padding:54px 0 26px;p
 .pay span{font-family:'Orbitron';font-weight:700;font-size:.68rem;background:var(--panel);border:1px solid var(--line);padding:5px 9px;border-radius:7px;margin-left:6px}
 
 /* drawers */
-.ov{position:fixed;inset:0;background:rgba(6,5,15,.7);backdrop-filter:blur(3px);z-index:90;opacity:0;visibility:hidden;transition:.3s}
+.ov{position:fixed;inset:0;background:rgba(58,44,90,.38);backdrop-filter:blur(3px);z-index:90;opacity:0;visibility:hidden;transition:.3s}
 .ov.open{opacity:1;visibility:visible}
 .drawer{position:fixed;top:0;right:-440px;width:min(420px,92vw);height:100%;background:var(--bg2);border-left:1px solid var(--line);z-index:95;transition:right .35s cubic-bezier(.2,.9,.3,1);display:flex;flex-direction:column}
 .drawer.open{right:0}
 .dh{padding:20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
-.dh h3{font-size:1.2rem;color:#fff}
+.dh h3{font-size:1.2rem;color:var(--ink)}
 .dbody{flex:1;padding:18px;overflow:auto;display:flex;flex-direction:column;gap:12px}
 .empty{text-align:center;color:var(--mut);margin-top:60px;font-family:'Rajdhani';font-weight:600}
 .empty svg{width:48px;height:48px;color:var(--line);margin:0 auto 12px}
@@ -281,7 +281,7 @@ footer{background:#06050F;border-top:1px solid var(--line);padding:54px 0 26px;p
 .ci span{font-family:'Rajdhani';font-weight:600;color:var(--mut);font-size:.8rem}
 .ci .rm{margin-left:auto;color:var(--red);width:30px;height:30px}
 .df{padding:20px;border-top:1px solid var(--line)}
-.tot{display:flex;justify-content:space-between;font-family:'Orbitron';font-weight:800;font-size:1.2rem;margin-bottom:14px;color:#fff}
+.tot{display:flex;justify-content:space-between;font-family:'Orbitron';font-weight:800;font-size:1.2rem;margin-bottom:14px;color:var(--ink)}
 .tot b{color:var(--cyan)}
 .df .btn{width:100%;justify-content:center}
 .mnav{position:fixed;top:0;left:-320px;width:300px;height:100%;background:var(--bg2);border-right:1px solid var(--line);z-index:95;transition:left .35s cubic-bezier(.2,.9,.3,1);padding:20px;overflow:auto}
@@ -293,10 +293,10 @@ footer{background:#06050F;border-top:1px solid var(--line);padding:54px 0 26px;p
 /* spin wheel */
 .spinbtn{position:fixed;right:18px;bottom:18px;z-index:44;display:flex;align-items:center;gap:9px;font-family:'Orbitron';font-weight:800;font-size:.78rem;padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,var(--yellow),var(--pink));color:#0B0A1F;box-shadow:0 0 24px -4px var(--pink);animation:bobj 3s ease-in-out infinite}
 .spinbtn svg{width:18px;height:18px;stroke:#0B0A1F}
-.spinmodal{position:fixed;inset:0;z-index:100;display:none;place-items:center;background:rgba(6,5,15,.82);backdrop-filter:blur(5px)}
+.spinmodal{position:fixed;inset:0;z-index:100;display:none;place-items:center;background:rgba(58,44,90,.5);backdrop-filter:blur(5px)}
 .spinmodal.open{display:grid}
 .spincard{background:var(--panel);border:1px solid var(--purple);border-radius:24px;padding:30px;text-align:center;max-width:340px;box-shadow:0 0 50px -10px rgba(155,108,255,.6);position:relative}
-.spincard h3{color:#fff;font-size:1.3rem;margin-bottom:4px}
+.spincard h3{color:var(--ink);font-size:1.3rem;margin-bottom:4px}
 .spincard p{color:var(--mut);font-family:'Rajdhani';font-weight:600;margin-bottom:14px}
 .wheelwrap{position:relative;width:220px;height:220px;margin:0 auto 18px}
 #wheelG{transition:transform 4.5s cubic-bezier(.15,.9,.25,1)}
@@ -312,9 +312,9 @@ footer{background:#06050F;border-top:1px solid var(--line);padding:54px 0 26px;p
 
 /* preloader: arcade boot */
 body.loading{overflow:hidden}
-.boot{position:fixed;inset:0;z-index:200;background:#06050F;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .5s}
+.boot{position:fixed;inset:0;z-index:200;background:linear-gradient(160deg,#FBF6FF,#F0E7FB);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .5s}
 .boot.done{opacity:0;pointer-events:none}
-.boot::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.25) 0 2px,transparent 2px 4px);pointer-events:none;opacity:.6}
+.boot::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(140,110,180,.06) 0 2px,transparent 2px 4px);pointer-events:none;opacity:.6}
 .boot .lw{background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 0 0 3px var(--pink),0 0 40px rgba(255,77,157,.6);animation:bobj 2.4s ease-in-out infinite}
 .boot .lw img{height:64px}
 .boot .ins{font-family:'Press Start 2P';font-size:13px;color:var(--cyan);text-shadow:0 0 10px var(--cyan);animation:blink 1s steps(2) infinite}
@@ -351,7 +351,7 @@ body.loading{overflow:hidden}
 .searchbar.open{max-height:84px}
 .sb-in{display:flex;align-items:center;gap:12px;padding:14px 22px}
 .sb-ic{color:var(--cyan);display:grid;place-items:center}.sb-ic svg{width:20px;height:20px}
-.searchbar input{flex:1;background:#06050F;border:1px solid var(--line);border-radius:10px;padding:11px 14px;color:var(--ink);font-family:'Rajdhani';font-weight:600;font-size:1rem}
+.searchbar input{flex:1;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 14px;color:var(--ink);font-family:'Rajdhani';font-weight:600;font-size:1rem}
 .searchbar input:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 14px rgba(38,224,242,.3)}
 .sb-count{font-family:'Orbitron';font-weight:700;font-size:.72rem;color:var(--mut);white-space:nowrap}
 
@@ -456,7 +456,7 @@ html,body{overflow-x:hidden;max-width:100%}
  <div class="thumb"><span class="cart-tag">EKT4021</span><span class="off">-55%</span>
   <img src="https://extrokids.com/cdn/shop/files/EKT4021_1_7fda5179-7863-4b15-aadd-6a3ca8f2ff00_800x.jpg?v=1772717171" alt="Tumbling Monkey Game" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.7</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.6</b></span>
   <h3>Tumbling Monkey Game</h3>
   <div class="prow"><div class="pr"><b>Rs.806</b><s>Rs.1799</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Tumbling Monkey Game&quot;, &quot;p&quot;: 806, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EKT4021_1_7fda5179-7863-4b15-aadd-6a3ca8f2ff00_800x.jpg?v=1772717171&quot;, &quot;ekt&quot;: &quot;EKT4021&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
@@ -464,7 +464,7 @@ html,body{overflow-x:hidden;max-width:100%}
  <div class="thumb"><span class="cart-tag">EKT4011</span><span class="off">-31%</span>
   <img src="https://extrokids.com/cdn/shop/files/EKT4011_1_929204de-cd8c-4a45-9564-1e5a16405727_800x.jpg?v=1772717154" alt="Multi Language Educational Phone" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.7</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz "><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.5</b></span>
   <h3>Multi Language Educational Phone</h3>
   <div class="prow"><div class="pr"><b>Rs.538</b><s>Rs.784</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Multi Language Educational Phone&quot;, &quot;p&quot;: 538, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EKT4011_1_929204de-cd8c-4a45-9564-1e5a16405727_800x.jpg?v=1772717154&quot;, &quot;ekt&quot;: &quot;EKT4011&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
@@ -472,7 +472,7 @@ html,body{overflow-x:hidden;max-width:100%}
  <div class="thumb"><span class="cart-tag">EKT3072</span><span class="off">-38%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT3072B_800x.jpg?v=1708350693" alt="Face Change Wooden Rubik's Cube" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.9</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.6</b></span>
   <h3>Face Change Wooden Rubik's Cube</h3>
   <div class="prow"><div class="pr"><b>Rs.404</b><s>Rs.647</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Face Change Wooden Rubik&#39;s Cube&quot;, &quot;p&quot;: 404, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT3072B_800x.jpg?v=1708350693&quot;, &quot;ekt&quot;: &quot;EKT3072&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
@@ -496,7 +496,7 @@ html,body{overflow-x:hidden;max-width:100%}
  <div class="thumb"><span class="cart-tag">EKT1495</span><span class="off">-32%</span>
   <img src="https://extrokids.com/cdn/shop/files/EK1495-2_800x.jpg?v=1708342729" alt="Wooden Color Memory Chess Game" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.8</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.9</b></span>
   <h3>Wooden Color Memory Chess Game</h3>
   <div class="prow"><div class="pr"><b>Rs.952</b><s>Rs.1401</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Color Memory Chess Game&quot;, &quot;p&quot;: 952, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EK1495-2_800x.jpg?v=1708342729&quot;, &quot;ekt&quot;: &quot;EKT1495&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
@@ -504,7 +504,7 @@ html,body{overflow-x:hidden;max-width:100%}
  <div class="thumb"><span class="cart-tag">EKT2603</span><span class="off">-43%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT2603-1_800x.jpg?v=1708353384" alt="Wooden 4-Player Shut the Box" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.8</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz "><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.5</b></span>
   <h3>Wooden 4-Player Shut the Box</h3>
   <div class="prow"><div class="pr"><b>Rs.840</b><s>Rs.1461</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden 4-Player Shut the Box&quot;, &quot;p&quot;: 840, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT2603-1_800x.jpg?v=1708353384&quot;, &quot;ekt&quot;: &quot;EKT2603&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
@@ -512,7 +512,7 @@ html,body{overflow-x:hidden;max-width:100%}
  <div class="thumb"><span class="cart-tag">EKT3217</span><span class="off">-10%</span>
   <img src="https://extrokids.com/cdn/shop/files/EKT3217_1_07feb6dd-600a-422d-9332-fdfb73ccf400_800x.jpg?v=1714231402" alt="Play And Learn Intelligence Book" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.8</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.9</b></span>
   <h3>Play And Learn Intelligence Book</h3>
   <div class="prow"><div class="pr"><b>Rs.496</b><s>Rs.549</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Play And Learn Intelligence Book&quot;, &quot;p&quot;: 496, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EKT3217_1_07feb6dd-600a-422d-9332-fdfb73ccf400_800x.jpg?v=1714231402&quot;, &quot;ekt&quot;: &quot;EKT3217&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
@@ -532,31 +532,31 @@ html,body{overflow-x:hidden;max-width:100%}
 <section class="block" id="cat" style="padding-top:0"><div class="wrap">
  <div class="head reveal" style="--ac:var(--cyan)"><div><div class="tag">Browse by category</div><h2>Toy Catalog</h2><p>Filter the full toy range by category.</p></div></div>
  <div class="chips reveal"><button class="chip on" data-f="All" onclick="filt(this)">All</button><button class="chip " data-f="Toys" onclick="filt(this)">Toys</button><button class="chip " data-f="Puzzles" onclick="filt(this)">Puzzles</button><button class="chip " data-f="Games" onclick="filt(this)">Games</button><button class="chip " data-f="Gadgets" onclick="filt(this)">Gadgets</button><button class="chip " data-f="Books" onclick="filt(this)">Books</button></div>
- <div class="grid reveal" id="catGrid"><article class="card" data-cat="Games" style="--ac:#26E0F2">
+ <div class="grid reveal" id="catGrid"><article class="card" data-cat="Games" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT4021</span><span class="off">-55%</span>
   <img src="https://extrokids.com/cdn/shop/files/EKT4021_1_7fda5179-7863-4b15-aadd-6a3ca8f2ff00_800x.jpg?v=1772717171" alt="Tumbling Monkey Game" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.7</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.6</b></span>
   <h3>Tumbling Monkey Game</h3>
   <div class="prow"><div class="pr"><b>Rs.806</b><s>Rs.1799</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Tumbling Monkey Game&quot;, &quot;p&quot;: 806, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EKT4021_1_7fda5179-7863-4b15-aadd-6a3ca8f2ff00_800x.jpg?v=1772717171&quot;, &quot;ekt&quot;: &quot;EKT4021&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Gadgets" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Gadgets" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT4011</span><span class="off">-31%</span>
   <img src="https://extrokids.com/cdn/shop/files/EKT4011_1_929204de-cd8c-4a45-9564-1e5a16405727_800x.jpg?v=1772717154" alt="Multi Language Educational Phone" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.7</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz "><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.5</b></span>
   <h3>Multi Language Educational Phone</h3>
   <div class="prow"><div class="pr"><b>Rs.538</b><s>Rs.784</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Multi Language Educational Phone&quot;, &quot;p&quot;: 538, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EKT4011_1_929204de-cd8c-4a45-9564-1e5a16405727_800x.jpg?v=1772717154&quot;, &quot;ekt&quot;: &quot;EKT4011&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Toys" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Toys" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT3072</span><span class="off">-38%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT3072B_800x.jpg?v=1708350693" alt="Face Change Wooden Rubik's Cube" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.9</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.6</b></span>
   <h3>Face Change Wooden Rubik's Cube</h3>
   <div class="prow"><div class="pr"><b>Rs.404</b><s>Rs.647</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Face Change Wooden Rubik&#39;s Cube&quot;, &quot;p&quot;: 404, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT3072B_800x.jpg?v=1708350693&quot;, &quot;ekt&quot;: &quot;EKT3072&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Gadgets" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Gadgets" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT2183</span><span class="off">-30%</span>
   <img src="https://extrokids.com/cdn/shop/files/ekt2183_800x.jpg?v=1740816785" alt="Wooden Robot Transformer 2-in-1" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
@@ -564,7 +564,7 @@ html,body{overflow-x:hidden;max-width:100%}
   <h3>Wooden Robot Transformer 2-in-1</h3>
   <div class="prow"><div class="pr"><b>Rs.237</b><s>Rs.340</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Robot Transformer 2-in-1&quot;, &quot;p&quot;: 237, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/ekt2183_800x.jpg?v=1740816785&quot;, &quot;ekt&quot;: &quot;EKT2183&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Puzzles" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Puzzles" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT3524</span><span class="off">-60%</span>
   <img src="https://extrokids.com/cdn/shop/files/EKT3524_5_800x.jpg?v=1737792872" alt="Kids Throw Ball Dartboard" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
@@ -572,31 +572,31 @@ html,body{overflow-x:hidden;max-width:100%}
   <h3>Kids Throw Ball Dartboard</h3>
   <div class="prow"><div class="pr"><b>Rs.606</b><s>Rs.1499</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Kids Throw Ball Dartboard&quot;, &quot;p&quot;: 606, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EKT3524_5_800x.jpg?v=1737792872&quot;, &quot;ekt&quot;: &quot;EKT3524&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Games" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Games" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT1495</span><span class="off">-32%</span>
   <img src="https://extrokids.com/cdn/shop/files/EK1495-2_800x.jpg?v=1708342729" alt="Wooden Color Memory Chess Game" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.8</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.9</b></span>
   <h3>Wooden Color Memory Chess Game</h3>
   <div class="prow"><div class="pr"><b>Rs.952</b><s>Rs.1401</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Color Memory Chess Game&quot;, &quot;p&quot;: 952, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EK1495-2_800x.jpg?v=1708342729&quot;, &quot;ekt&quot;: &quot;EKT1495&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Games" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Games" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT2603</span><span class="off">-43%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT2603-1_800x.jpg?v=1708353384" alt="Wooden 4-Player Shut the Box" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.8</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz "><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.5</b></span>
   <h3>Wooden 4-Player Shut the Box</h3>
   <div class="prow"><div class="pr"><b>Rs.840</b><s>Rs.1461</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden 4-Player Shut the Box&quot;, &quot;p&quot;: 840, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT2603-1_800x.jpg?v=1708353384&quot;, &quot;ekt&quot;: &quot;EKT2603&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Books" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Books" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT3217</span><span class="off">-10%</span>
   <img src="https://extrokids.com/cdn/shop/files/EKT3217_1_07feb6dd-600a-422d-9332-fdfb73ccf400_800x.jpg?v=1714231402" alt="Play And Learn Intelligence Book" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.8</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.9</b></span>
   <h3>Play And Learn Intelligence Book</h3>
   <div class="prow"><div class="pr"><b>Rs.496</b><s>Rs.549</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Play And Learn Intelligence Book&quot;, &quot;p&quot;: 496, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EKT3217_1_07feb6dd-600a-422d-9332-fdfb73ccf400_800x.jpg?v=1714231402&quot;, &quot;ekt&quot;: &quot;EKT3217&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Puzzles" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Puzzles" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT3109</span><span class="off">-30%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT3109-1_800x.jpg?v=1708350675" alt="Wooden Family Animal Matching Puzzle" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
@@ -604,59 +604,59 @@ html,body{overflow-x:hidden;max-width:100%}
   <h3>Wooden Family Animal Matching Puzzle</h3>
   <div class="prow"><div class="pr"><b>Rs.223</b><s>Rs.320</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Family Animal Matching Puzzle&quot;, &quot;p&quot;: 223, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT3109-1_800x.jpg?v=1708350675&quot;, &quot;ekt&quot;: &quot;EKT3109&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Puzzles" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Puzzles" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT2228</span><span class="off">-30%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT2228-1_800x.jpg?v=1708348887" alt="Numbers with Shapes Board" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.7</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.6</b></span>
   <h3>Numbers with Shapes Board</h3>
   <div class="prow"><div class="pr"><b>Rs.223</b><s>Rs.320</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Numbers with Shapes Board&quot;, &quot;p&quot;: 223, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT2228-1_800x.jpg?v=1708348887&quot;, &quot;ekt&quot;: &quot;EKT2228&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Puzzles" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Puzzles" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT3304</span><span class="off">-30%</span>
   <img src="https://extrokids.com/cdn/shop/files/EKT3304_1_8cf9a71e-9039-4841-a7c3-c55de825d92d_800x.jpg?v=1725713134" alt="Wooden Dress-Up Puzzle Set" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.9</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.6</b></span>
   <h3>Wooden Dress-Up Puzzle Set</h3>
   <div class="prow"><div class="pr"><b>Rs.223</b><s>Rs.320</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Dress-Up Puzzle Set&quot;, &quot;p&quot;: 223, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EKT3304_1_8cf9a71e-9039-4841-a7c3-c55de825d92d_800x.jpg?v=1725713134&quot;, &quot;ekt&quot;: &quot;EKT3304&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Puzzles" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Puzzles" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT3305</span><span class="off">-30%</span>
   <img src="https://extrokids.com/cdn/shop/files/EKT3305_1_0714d217-de66-4534-9c8a-906e813c5e12_800x.jpg?v=1725713138" alt="Wooden Color Matching Puzzle" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.9</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.6</b></span>
   <h3>Wooden Color Matching Puzzle</h3>
   <div class="prow"><div class="pr"><b>Rs.223</b><s>Rs.320</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Color Matching Puzzle&quot;, &quot;p&quot;: 223, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/files/EKT3305_1_0714d217-de66-4534-9c8a-906e813c5e12_800x.jpg?v=1725713138&quot;, &quot;ekt&quot;: &quot;EKT3305&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Puzzles" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Puzzles" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT2665</span><span class="off">-30%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT2665-1_800x.jpg?v=1708352681" alt="Wooden Alphabet board Capital" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.6</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.7</b></span>
   <h3>Wooden Alphabet board Capital</h3>
   <div class="prow"><div class="pr"><b>Rs.223</b><s>Rs.320</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Alphabet board Capital&quot;, &quot;p&quot;: 223, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT2665-1_800x.jpg?v=1708352681&quot;, &quot;ekt&quot;: &quot;EKT2665&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Puzzles" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Puzzles" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT2237</span><span class="off">-30%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT2237-1_800x.jpg?v=1708350356" alt="Wooden Fruit Board" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.8</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz "><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.5</b></span>
   <h3>Wooden Fruit Board</h3>
   <div class="prow"><div class="pr"><b>Rs.223</b><s>Rs.320</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Fruit Board&quot;, &quot;p&quot;: 223, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT2237-1_800x.jpg?v=1708350356&quot;, &quot;ekt&quot;: &quot;EKT2237&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Puzzles" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Puzzles" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT2235</span><span class="off">-30%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT2235-1_800x.jpg?v=1708346580" alt="Wooden Vehicles Board" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz "><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.5</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.6</b></span>
   <h3>Wooden Vehicles Board</h3>
   <div class="prow"><div class="pr"><b>Rs.223</b><s>Rs.320</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Vehicles Board&quot;, &quot;p&quot;: 223, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT2235-1_800x.jpg?v=1708346580&quot;, &quot;ekt&quot;: &quot;EKT2235&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
-</article><article class="card" data-cat="Puzzles" style="--ac:#26E0F2">
+</article><article class="card" data-cat="Puzzles" style="--ac:#16AEC9">
  <div class="thumb"><span class="cart-tag">EKT3107</span><span class="off">-30%</span>
   <img src="https://extrokids.com/cdn/shop/products/EKT3107-1_800x.jpg?v=1708348365" alt="Wooden Number Count Puzzle - 1-10" loading="lazy">
   <button class="wish" aria-label="Wishlist" onclick="wishT(this,event)"><svg class="w" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button></div>
- <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.8</b></span>
+ <div class="cbody"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><b>4.7</b></span>
   <h3>Wooden Number Count Puzzle - 1-10</h3>
   <div class="prow"><div class="pr"><b>Rs.223</b><s>Rs.320</s></div>
    <button class="add" aria-label="Add" onclick='addCart("{&quot;n&quot;: &quot;Wooden Number Count Puzzle - 1-10&quot;, &quot;p&quot;: 223, &quot;img&quot;: &quot;https://extrokids.com/cdn/shop/products/EKT3107-1_800x.jpg?v=1708348365&quot;, &quot;ekt&quot;: &quot;EKT3107&quot;}",this)'><svg class="a" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
@@ -665,10 +665,10 @@ html,body{overflow-x:hidden;max-width:100%}
 
 <section class="block" id="power" style="padding-top:0"><div class="wrap">
  <div class="head center reveal" style="--ac:var(--purple)"><div><div class="tag">Skill tree</div><h2>Power-Ups for Growing Brains</h2><p>Every toy builds a real-world skill.</p></div></div>
- <div class="pwrs reveal"><div class="pwr" style="--ac:#FF4D5E"><div class="pic"><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11V6a1.5 1.5 0 013 0v4m0-1V5a1.5 1.5 0 013 0v5m0-1V6a1.5 1.5 0 013 0v7a6 6 0 01-6 6 6 6 0 01-5-3l-2-3a1.6 1.6 0 012.6-1.8L11 14"/></svg></div>
+ <div class="pwrs reveal"><div class="pwr" style="--ac:#FF5A6A"><div class="pic"><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11V6a1.5 1.5 0 013 0v4m0-1V5a1.5 1.5 0 013 0v5m0-1V6a1.5 1.5 0 013 0v7a6 6 0 01-6 6 6 6 0 01-5-3l-2-3a1.6 1.6 0 012.6-1.8L11 14"/></svg></div>
  <h3>Motor</h3><span>Grip, stack & balance</span><div class="bar"><i style="width:82%"></i></div><small>LVL 82</small></div><div class="pwr" style="--ac:#FF4D9D"><div class="pic"><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="9.5" r="1.2"/><circle cx="14" cy="8.5" r="1.2"/><circle cx="16" cy="12.5" r="1.2"/></svg></div>
- <h3>Creativity</h3><span>Build & imagine</span><div class="bar"><i style="width:90%"></i></div><small>LVL 90</small></div><div class="pwr" style="--ac:#26E0F2"><div class="pic"><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 00-3 3 3 3 0 00-1 5 3 3 0 002 5 3 3 0 005 1V5a3 3 0 00-3-1zM15 4a3 3 0 013 3 3 3 0 011 5 3 3 0 01-2 5 3 3 0 01-5 1"/></svg></div>
- <h3>Logic</h3><span>Solve & strategise</span><div class="bar"><i style="width:86%"></i></div><small>LVL 86</small></div><div class="pwr" style="--ac:#39E66B"><div class="pic"><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="3"/><path d="M8 21l3-4"/></svg></div>
+ <h3>Creativity</h3><span>Build & imagine</span><div class="bar"><i style="width:90%"></i></div><small>LVL 90</small></div><div class="pwr" style="--ac:#16AEC9"><div class="pic"><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 00-3 3 3 3 0 00-1 5 3 3 0 002 5 3 3 0 005 1V5a3 3 0 00-3-1zM15 4a3 3 0 013 3 3 3 0 011 5 3 3 0 01-2 5 3 3 0 01-5 1"/></svg></div>
+ <h3>Logic</h3><span>Solve & strategise</span><div class="bar"><i style="width:86%"></i></div><small>LVL 86</small></div><div class="pwr" style="--ac:#22B36A"><div class="pic"><svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="3"/><path d="M8 21l3-4"/></svg></div>
  <h3>Language</h3><span>First words & talk</span><div class="bar"><i style="width:78%"></i></div><small>LVL 78</small></div></div>
 </div></section>
 
@@ -689,8 +689,8 @@ html,body{overflow-x:hidden;max-width:100%}
 <section class="block" style="padding-top:0"><div class="wrap">
  <div class="head center reveal" style="--ac:var(--green)"><div><div class="tag">Parent reviews</div><h2>What Families Say</h2></div></div>
  <div class="revs reveal"><figure class="rev" style="--ac:#FF4D9D"><div class="rs"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg></div>
- <blockquote>Hasn't touched the tablet since these wooden puzzles arrived. Total win.</blockquote><figcaption><span class="av">P</span><span><b>Priya S.</b><small>PARENT &middot; BENGALURU</small></span></figcaption></figure><figure class="rev" style="--ac:#26E0F2"><div class="rs"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg></div>
- <blockquote>Safe, well-built, delivered in 3 days. New high score for gifting.</blockquote><figcaption><span class="av">A</span><span><b>Arjun M.</b><small>PARENT &middot; PUNE</small></span></figcaption></figure><figure class="rev" style="--ac:#39E66B"><div class="rs"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg></div>
+ <blockquote>Hasn't touched the tablet since these wooden puzzles arrived. Total win.</blockquote><figcaption><span class="av">P</span><span><b>Priya S.</b><small>PARENT &middot; BENGALURU</small></span></figcaption></figure><figure class="rev" style="--ac:#16AEC9"><div class="rs"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg></div>
+ <blockquote>Safe, well-built, delivered in 3 days. New high score for gifting.</blockquote><figcaption><span class="av">A</span><span><b>Arjun M.</b><small>PARENT &middot; PUNE</small></span></figcaption></figure><figure class="rev" style="--ac:#22B36A"><div class="rs"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg></div>
  <blockquote>A mom clearly picks these. Every toy actually teaches. Obsessed.</blockquote><figcaption><span class="av">F</span><span><b>Fatima K.</b><small>PARENT &middot; HYDERABAD</small></span></figcaption></figure></div>
 </div></section>
 
@@ -718,7 +718,7 @@ html,body{overflow-x:hidden;max-width:100%}
 <div class="spinmodal" id="spinmodal">
  <div class="spincard"><button class="spinclose ib" style="width:34px;height:34px;background:none;border:none" onclick="closeSpin()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   <h3>SPIN TO WIN</h3><p>One free spin per visit!</p>
-  <div class="wheelwrap"><div class="ptr"></div><svg viewBox="0 0 220 220" id="wheelSvg"><g id="wheelG" style="transform-origin:110px 110px"><path d="M110 110 L110.0 6.0 A104 104 0 0 1 200.1 58.0 Z" fill="#FF4D9D" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L200.1 58.0 A104 104 0 0 1 200.1 162.0 Z" fill="#26E0F2" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L200.1 162.0 A104 104 0 0 1 110.0 214.0 Z" fill="#9B6CFF" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L110.0 214.0 A104 104 0 0 1 19.9 162.0 Z" fill="#FFE14D" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L19.9 162.0 A104 104 0 0 1 19.9 58.0 Z" fill="#39E66B" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L19.9 58.0 A104 104 0 0 1 110.0 6.0 Z" fill="#FF4D5E" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><text x="142.2" y="54.2" transform="rotate(30.0 142.2 54.2)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">5% OFF</text><text x="174.5" y="110.0" transform="rotate(90.0 174.5 110.0)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">10% OFF</text><text x="142.2" y="165.8" transform="rotate(150.0 142.2 165.8)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">TRY AGAIN</text><text x="77.8" y="165.8" transform="rotate(210.0 77.8 165.8)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">15% OFF</text><text x="45.5" y="110.0" transform="rotate(270.0 45.5 110.0)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">FREE SHIP</text><text x="77.8" y="54.2" transform="rotate(330.0 77.8 54.2)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">20% OFF</text></g><circle cx="110" cy="110" r="16" fill="#0B0A1F" stroke="#fff" stroke-width="3"/></svg></div>
+  <div class="wheelwrap"><div class="ptr"></div><svg viewBox="0 0 220 220" id="wheelSvg"><g id="wheelG" style="transform-origin:110px 110px"><path d="M110 110 L110.0 6.0 A104 104 0 0 1 200.1 58.0 Z" fill="#FF4D9D" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L200.1 58.0 A104 104 0 0 1 200.1 162.0 Z" fill="#16AEC9" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L200.1 162.0 A104 104 0 0 1 110.0 214.0 Z" fill="#8B5CF6" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L110.0 214.0 A104 104 0 0 1 19.9 162.0 Z" fill="#F2A100" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L19.9 162.0 A104 104 0 0 1 19.9 58.0 Z" fill="#22B36A" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><path d="M110 110 L19.9 58.0 A104 104 0 0 1 110.0 6.0 Z" fill="#FF5A6A" opacity=".88" stroke="#0B0A1F" stroke-width="2"/><text x="142.2" y="54.2" transform="rotate(30.0 142.2 54.2)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">5% OFF</text><text x="174.5" y="110.0" transform="rotate(90.0 174.5 110.0)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">10% OFF</text><text x="142.2" y="165.8" transform="rotate(150.0 142.2 165.8)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">TRY AGAIN</text><text x="77.8" y="165.8" transform="rotate(210.0 77.8 165.8)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">15% OFF</text><text x="45.5" y="110.0" transform="rotate(270.0 45.5 110.0)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">FREE SHIP</text><text x="77.8" y="54.2" transform="rotate(330.0 77.8 54.2)" font-family="Orbitron,sans-serif" font-weight="800" font-size="11" fill="#0B0A1F" text-anchor="middle" dominant-baseline="middle">20% OFF</text></g><circle cx="110" cy="110" r="16" fill="#0B0A1F" stroke="#fff" stroke-width="3"/></svg></div>
   <div class="spinres" id="spinres"></div>
   <button class="btn btn-p" style="width:100%;justify-content:center" id="spinGo" onclick="spin()"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/></svg> SPIN</button>
  </div>
