@@ -93,7 +93,7 @@ header{position:sticky;top:0;z-index:45;background:rgba(11,10,31,.78);backdrop-f
 .screen .frame img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
 .screen .scan{display:none}
 .dpad{position:absolute;bottom:-22px;left:-22px;width:80px;height:80px;z-index:4;color:var(--pink);filter:drop-shadow(0 0 12px rgba(255,77,157,.6));animation:bobj 4s ease-in-out infinite}
-.abtn{position:absolute;top:-20px;right:-16px;display:flex;gap:8px;z-index:4}
+.abtn{display:none}
 .abtn span{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-family:'Orbitron';font-weight:800;color:#0B0A1F}
 @keyframes bobj{50%{transform:translateY(-10px)}}
 .float-tag{position:absolute;background:var(--panel);border:1px solid var(--ac,var(--green));color:var(--ac,var(--green));border-radius:10px;padding:8px 12px;font-family:'Rajdhani';font-weight:700;letter-spacing:.08em;font-size:.76rem;display:flex;align-items:center;gap:7px;z-index:5;box-shadow:0 0 16px -2px var(--ac,var(--green))}
@@ -389,7 +389,7 @@ html,body{overflow-x:hidden;max-width:100%}
 .shipbar{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin-bottom:14px}
 .shipbar p{font-family:'Rajdhani';font-weight:700;font-size:.84rem;color:var(--ink);margin-bottom:8px}
 .shipbar.done p{color:var(--green)}
-.shiptrack{height:8px;border-radius:6px;background:#06050F;overflow:hidden;border:1px solid var(--line)}
+.shiptrack{height:8px;border-radius:6px;background:var(--panel2);overflow:hidden;border:1px solid var(--line)}
 .shiptrack i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));transition:width .45s ease}
 .csecure{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:10px;font-family:'Rajdhani';font-weight:600;font-size:.78rem;color:var(--mut)}
 .csecure svg{width:14px;height:14px;color:var(--green)}
