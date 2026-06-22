@@ -1,0 +1,350 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cordless Light-Up Learning Pen — Intelli Kids Phonics — Extrokids</title>
+<meta name="description" content="Interactive alphabet & numbers learning set with a cordless pen that lights up on every correct answer. Ages 2+. Screen-free.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;min-width:0}
+:root{
+ --bg:#FBF6FF;--bg2:#F0E7FB;--panel:#FFFFFF;--panel2:#F5EEFD;--line:#E9DEF5;
+ --cyan:#16AEC9;--pink:#FF4D9D;--green:#22B36A;--yellow:#F2A100;--purple:#8B5CF6;--red:#FF5A6A;
+ --ink:#3A2C58;--mut:#8B82A6;--r:18px;
+}
+html,body{overflow-x:hidden;max-width:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Poppins',sans-serif;line-height:1.55;position:relative}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:
+ radial-gradient(60% 50% at 50% 0%,rgba(155,108,255,.14),transparent 60%),
+ radial-gradient(50% 40% at 90% 15%,rgba(38,224,242,.1),transparent 60%),
+ linear-gradient(180deg,#FBF6FF,#F3ECFF 60%,#FBF6FF)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-family:'Rajdhani';font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.74rem;color:var(--purple);background:rgba(139,92,246,.1);border:1px solid var(--line);padding:5px 11px;border-radius:20px}
+h1,h2,h3{font-family:'Orbitron',sans-serif}
+/* header */
+header{position:sticky;top:0;z-index:45;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr{display:flex;align-items:center;gap:14px;height:70px}
+.logo{display:flex;align-items:center;gap:10px}
+.lw{width:40px;height:40px;border-radius:11px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
+.lw img{width:30px;height:30px;object-fit:contain}
+.logo b{font-family:'Orbitron';font-weight:800;font-size:1.04rem;letter-spacing:.02em}
+.logo b span{color:var(--pink)}
+.back{margin-left:auto;font-family:'Rajdhani';font-weight:700;font-size:.9rem;color:var(--mut);display:flex;align-items:center;gap:6px}
+.back:hover{color:var(--cyan)}
+.ic-cart{position:relative;width:42px;height:42px;border-radius:11px;background:var(--panel);border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);cursor:pointer}
+.ic-cart svg{width:21px;height:21px}
+.ic-cart .bdg{position:absolute;top:-6px;right:-6px;min-width:19px;height:19px;border-radius:10px;background:var(--pink);color:#fff;font-family:'Orbitron';font-weight:800;font-size:.62rem;display:none;place-items:center;padding:0 5px}
+/* breadcrumb */
+.crumb{font-family:'Rajdhani';font-weight:600;font-size:.82rem;color:var(--mut);padding:16px 0 4px}
+.crumb a:hover{color:var(--cyan)}
+/* layout */
+.pdp{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;padding:14px 0 40px;align-items:start}
+/* gallery */
+.gallery{position:sticky;top:90px}
+.gmain{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;position:relative;box-shadow:0 18px 50px -28px rgba(110,70,170,.4)}
+.gmain img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.gbadge{position:absolute;top:14px;left:14px;display:flex;flex-direction:column;gap:8px;z-index:2}
+.gbadge span{font-family:'Orbitron';font-weight:800;font-size:.62rem;letter-spacing:.06em;padding:5px 10px;border-radius:8px;color:#fff;box-shadow:0 6px 16px -6px rgba(0,0,0,.3)}
+.gbadge .bsale{background:linear-gradient(90deg,var(--pink),var(--red))}
+.gbadge .bnew{background:var(--green);color:#0B0A1F}
+.thumbs{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.thumbs img{width:74px;height:74px;border-radius:12px;object-fit:cover;background:#fff;border:2px solid var(--line);cursor:pointer;transition:.18s}
+.thumbs img.on,.thumbs img:hover{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(22,174,201,.18)}
+/* buy box */
+.buy h1{font-size:clamp(1.5rem,3vw,2.05rem);font-weight:800;line-height:1.18;margin:12px 0 10px}
+.rate{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.stars{display:flex;align-items:center;gap:1px}
+.stz{width:17px;height:17px;fill:var(--line)}
+.stz.on{fill:var(--yellow)}
+.rate .rn{font-family:'Orbitron';font-weight:800;font-size:.8rem;color:var(--yellow)}
+.rate .rc{font-family:'Rajdhani';font-weight:600;font-size:.82rem;color:var(--mut)}
+.rate .pill{font-family:'Rajdhani';font-weight:700;font-size:.74rem;color:var(--green);background:rgba(34,179,106,.1);border:1px solid var(--line);padding:3px 9px;border-radius:20px}
+.social{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;font-family:'Rajdhani';font-weight:600;font-size:.84rem;color:var(--mut)}
+.social span{display:flex;align-items:center;gap:6px}
+.social svg{width:15px;height:15px;color:var(--pink)}
+.price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.price .now{font-family:'Orbitron';font-weight:900;font-size:2rem;color:var(--ink)}
+.price .was{font-size:1.05rem;color:var(--mut);text-decoration:line-through}
+.price .save{font-family:'Orbitron';font-weight:800;font-size:.72rem;color:#fff;background:var(--green);padding:4px 9px;border-radius:8px}
+.taxline{font-family:'Rajdhani';font-weight:600;font-size:.78rem;color:var(--mut);margin-bottom:16px}
+/* urgency */
+.urgency{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:18px}
+.stockrow{display:flex;justify-content:space-between;align-items:center;font-family:'Rajdhani';font-weight:700;font-size:.84rem;margin-bottom:8px}
+.stockrow .left{color:var(--red);display:flex;align-items:center;gap:6px}
+.stockrow .left svg{width:15px;height:15px}
+.stocktrack{height:8px;border-radius:6px;background:#ece3f7;overflow:hidden;border:1px solid var(--line)}
+.stocktrack i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--yellow))}
+.cd{display:flex;align-items:center;gap:9px;margin-top:12px;flex-wrap:wrap}
+.cd .lab{font-family:'Rajdhani';font-weight:700;font-size:.78rem;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.cd .cells{display:flex;gap:6px}
+.cd .cell{background:#fff;border:1px solid var(--line);border-radius:9px;padding:5px 8px;text-align:center;min-width:42px}
+.cd .cell b{font-family:'Orbitron';font-weight:800;font-size:1rem;color:var(--purple);display:block;line-height:1}
+.cd .cell span{font-family:'Rajdhani';font-weight:600;font-size:.6rem;color:var(--mut);text-transform:uppercase}
+/* benefits */
+.benefits{list-style:none;margin:0 0 20px;display:grid;gap:9px}
+.benefits li{display:flex;align-items:flex-start;gap:9px;font-weight:500;font-size:.94rem;color:var(--ink)}
+.benefits li svg{width:18px;height:18px;color:var(--green);flex-shrink:0;margin-top:2px}
+/* qty + cta */
+.qtyrow{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.qtyrow .lbl{font-family:'Rajdhani';font-weight:700;font-size:.86rem;color:var(--mut)}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.qty button{width:40px;height:42px;background:none;border:none;font-size:1.3rem;color:var(--ink);cursor:pointer}
+.qty button:active{background:var(--panel2)}
+.qty span{width:44px;text-align:center;font-family:'Orbitron';font-weight:800}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:none;border-radius:13px;font-family:'Orbitron';font-weight:800;font-size:.92rem;letter-spacing:.02em;cursor:pointer;padding:15px 20px;transition:.18s;width:100%}
+.btn svg{width:19px;height:19px}
+.btn-p{background:linear-gradient(90deg,var(--pink),var(--red));color:#fff;box-shadow:0 12px 28px -10px var(--pink)}
+.btn-p:hover{transform:translateY(-2px)}
+.btn-g{background:#fff;color:var(--purple);border:1.5px solid var(--purple)}
+.btn-g:hover{background:var(--panel2)}
+.ctas{display:grid;gap:10px;margin-bottom:8px}
+.add-feedback{background:var(--green)!important;color:#fff!important}
+/* trust */
+.trustrow{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}
+.trustrow .t{display:flex;align-items:center;gap:9px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.trustrow .t svg{width:20px;height:20px;color:var(--green);flex-shrink:0}
+.trustrow .t b{font-family:'Rajdhani';font-weight:700;font-size:.82rem;display:block;line-height:1.2}
+.trustrow .t span{font-family:'Rajdhani';font-weight:500;font-size:.72rem;color:var(--mut)}
+.pay{display:flex;align-items:center;gap:8px;font-family:'Rajdhani';font-weight:600;font-size:.78rem;color:var(--mut);margin-bottom:6px}
+.pay b{color:var(--ink)}
+/* accordion */
+.acc{border:1px solid var(--line);border-radius:13px;background:var(--panel);margin-bottom:10px;overflow:hidden}
+.acc>button{width:100%;text-align:left;background:none;border:none;padding:15px 16px;font-family:'Poppins';font-weight:600;font-size:.96rem;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer}
+.acc>button svg{width:17px;height:17px;color:var(--cyan);transition:transform .25s;flex-shrink:0}
+.acc.open>button svg{transform:rotate(45deg)}
+.acc .body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.acc.open .body{max-height:600px}
+.acc .body .in{padding:0 16px 16px;color:var(--mut);font-size:.9rem}
+.acc .body p{margin-bottom:9px}
+.acc .body ul{margin:0 0 4px 18px}
+.acc .body li{margin-bottom:5px}
+.acc .body table{width:100%;border-collapse:collapse;font-size:.86rem}
+.acc .body td{padding:7px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+.acc .body td:first-child{color:var(--mut);width:42%}
+/* generic section */
+.block{padding:42px 0;border-top:1px solid var(--line)}
+.shead{text-align:center;max-width:620px;margin:0 auto 28px}
+.shead .eyebrow{margin-bottom:12px}
+.shead h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800}
+.shead p{color:var(--mut);margin-top:8px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.why .c{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
+.why .c .ico{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;margin:0 auto 12px;color:#fff;background:linear-gradient(135deg,var(--purple),var(--cyan))}
+.why .c .ico svg{width:24px;height:24px}
+.why .c h3{font-size:.92rem;font-weight:800;margin-bottom:6px}
+.why .c p{font-size:.82rem;color:var(--mut)}
+.skills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.skills span{font-family:'Rajdhani';font-weight:700;font-size:.86rem;color:var(--purple);background:rgba(139,92,246,.08);border:1px solid var(--line);padding:8px 15px;border-radius:30px}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:880px;margin:0 auto}
+.rev{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}
+.rev .stars{margin-bottom:10px}
+.rev p{font-size:.92rem;margin-bottom:12px}
+.rev .who{display:flex;align-items:center;gap:10px}
+.rev .av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;display:grid;place-items:center;font-family:'Orbitron';font-weight:800;font-size:.85rem}
+.rev .who b{font-size:.85rem;display:block}
+.rev .who span{font-size:.72rem;color:var(--green);font-family:'Rajdhani';font-weight:700}
+.revempty{text-align:center;color:var(--mut);max-width:520px;margin:0 auto;background:var(--panel);border:1px dashed var(--line);border-radius:16px;padding:26px}
+/* guarantee */
+.guar{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:center}
+.guar span{display:flex;align-items:center;gap:7px;font-family:'Rajdhani';font-weight:700;font-size:.86rem;color:var(--mut)}
+.guar svg{width:16px;height:16px;color:var(--green)}
+/* faq */
+.faqwrap{max-width:760px;margin:0 auto}
+/* related */
+.related{display:grid;grid-template-columns:1fr;gap:16px;max-width:560px;margin:0 auto}
+.relcard{display:flex;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;transition:.18s}
+.relcard:hover{border-color:var(--cyan);transform:translateY(-2px)}
+.relcard img{width:84px;height:84px;border-radius:12px;object-fit:cover;background:#fff;flex-shrink:0}
+.relcard b{font-family:'Orbitron';font-weight:800;font-size:.92rem;display:block;margin-bottom:4px}
+.relcard .p{font-family:'Orbitron';font-weight:800;color:var(--cyan)}
+.relcard .go{margin-left:auto;color:var(--purple)}
+/* sticky mobile bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:44;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px;display:none;align-items:center;gap:12px;box-shadow:0 -8px 24px -12px rgba(110,70,170,.3)}
+.sticky .sp{font-family:'Orbitron';font-weight:900;font-size:1.15rem}
+.sticky .btn{width:auto;flex:1;padding:13px 18px}
+/* footer */
+footer{background:var(--bg2);border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--mut);font-family:'Rajdhani';font-weight:600;font-size:.84rem}
+footer a{color:var(--cyan)}
+/* cart drawer */
+.ov{position:fixed;inset:0;background:rgba(58,44,90,.38);z-index:60;opacity:0;pointer-events:none;transition:.3s}
+.ov.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:380px;max-width:90vw;background:var(--bg2);border-left:1px solid var(--line);z-index:70;transform:translateX(105%);transition:.32s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
+.drawer.open{transform:none}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:18px;border-bottom:1px solid var(--line)}
+.dh h3{font-size:1rem;font-weight:800}
+.dbody{flex:1;overflow:auto;padding:16px}
+.df{padding:16px;border-top:1px solid var(--line)}
+.ib{width:38px;height:38px;border-radius:10px;background:var(--panel);border:1px solid var(--line);display:grid;place-items:center;color:var(--ink);cursor:pointer}
+.ib svg{width:18px;height:18px}
+.ci{display:flex;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:10px}
+.ci img{width:50px;height:50px;border-radius:9px;object-fit:cover;background:#fff}
+.ci b{font-size:.84rem;display:block;line-height:1.2}
+.ci span{font-size:.74rem;color:var(--mut);font-family:'Rajdhani';font-weight:600}
+.empty{text-align:center;color:var(--mut);padding:30px 10px}
+.empty svg{width:42px;height:42px;color:var(--line);margin-bottom:10px}
+.shipbar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin-bottom:14px}
+.shipbar p{font-family:'Rajdhani';font-weight:700;font-size:.82rem;margin-bottom:8px}
+.shipbar.done p{color:var(--green)}
+.shiptrack{height:8px;border-radius:6px;background:var(--panel2);overflow:hidden;border:1px solid var(--line)}
+.shiptrack i{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));transition:width .45s}
+.tot{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-family:'Rajdhani';font-weight:700}
+.tot b{font-family:'Orbitron';font-weight:900;font-size:1.2rem;color:var(--ink)}
+.toast{position:fixed;top:84px;right:18px;z-index:120;display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--green);border-radius:14px;padding:12px;box-shadow:0 0 26px -8px var(--green);transform:translateX(130%);transition:transform .42s cubic-bezier(.2,.9,.3,1);max-width:300px}
+.toast.show{transform:none}
+.toast img{width:44px;height:44px;border-radius:9px;object-fit:cover;background:#fff}
+.toast .tb{font-family:'Orbitron';font-weight:800;font-size:.64rem;color:var(--green);letter-spacing:.06em}
+.toast .tn{font-family:'Poppins';font-weight:600;font-size:.8rem;line-height:1.2}
+@media(max-width:860px){
+ .pdp{grid-template-columns:1fr;gap:24px}
+ .gallery{position:static}
+ .why{grid-template-columns:repeat(2,1fr)}
+ .revs{grid-template-columns:1fr}
+ .sticky{display:flex}
+ .ctas .btn-buy-desktop{display:none}
+ body{padding-bottom:74px}
+ .back span{display:none}
+}
+@media(max-width:480px){.trustrow{grid-template-columns:1fr}.thumbs img{width:62px;height:62px}}
+</style></head><body>
+
+<header><div class="wrap hdr">
+ <a href="index.html" class="logo"><span class="lw"><img src="data:image/avif;base64,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" alt="Extrokids"></span><b>Extro<span>kids</span></b></a>
+ <a href="index.html" class="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M15 18l-6-6 6-6"/></svg><span>Back to store</span></a>
+ <button class="ic-cart" onclick="openC()" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 016 0"/></svg><span class="bdg" id="cb">0</span></button>
+</div></header>
+
+<div class="wrap"><div class="crumb"><a href="index.html">Home</a> / <a href="index.html#cat">Toys</a> / Cordless Light-Up Learning Pen — Intelli Kids Phonics</div>
+
+<div class="pdp">
+ <div class="gallery">
+  <div class="gmain"><div class="gbadge"><span class="bsale">FLASH SALE</span><span class="bnew">NEW</span></div><img id="mainImg" src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423" alt="Cordless Light-Up Learning Pen — Intelli Kids Phonics"></div>
+  <div class="thumbs" id="thumbs"><img src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423" onclick="selImg(this.src,this)" class="on" alt="view"><img src="https://extrokids.com/cdn/shop/files/EKT3566_1_c638e2d4-ab86-437f-9077-23f5f4a2dd73_large.jpg?v=1763818423" onclick="selImg(this.src,this)" alt="view"><img src="https://extrokids.com/cdn/shop/files/EKT3566_5_large.jpg?v=1763818448" onclick="selImg(this.src,this)" alt="view"><img src="https://extrokids.com/cdn/shop/files/EKT3566_3_e0f1e759-3757-4433-8db5-487aab580aba_large.jpg?v=1763818448" onclick="selImg(this.src,this)" alt="view"></div>
+ </div>
+ <div class="buy">
+  <span class="eyebrow">Interactive phonics · Ages 2+</span>
+  <h1>Cordless Light-Up Learning Pen — Intelli Kids Phonics</h1>
+  <div class="rate"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg></span><span class="pill">New arrival · be the first to review</span></div>
+  <div class="social">
+   <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s5 4 5 9a5 5 0 01-10 0c0-2 1-3 1-3s0 2 2 2c1.5 0 1-3 2-9z"/></svg> 2 sold in the last 8 hours</span>
+   <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg> 10 people viewing now</span>
+  </div>
+  <div class="price"><span class="now">Rs.450</span></div>
+  <div class="taxline">Inclusive of all taxes · Flash sale price</div>
+
+  <div class="urgency">
+   <div class="stockrow"><span class="left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg> Only 48 left in stock</span><span style="color:var(--mut)">Selling fast</span></div>
+   <div class="stocktrack"><i style="width:28%"></i></div>
+   <div class="cd"><span class="lab">Flash sale ends in</span><div class="cells">
+     <div class="cell"><b id="cdd">02</b><span>days</span></div>
+     <div class="cell"><b id="cdh">00</b><span>hrs</span></div>
+     <div class="cell"><b id="cdm">00</b><span>min</span></div>
+     <div class="cell"><b id="cds">00</b><span>sec</span></div>
+   </div></div>
+  </div>
+
+  <ul class="benefits"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>The pen lights up on every correct answer — instant, joyful feedback</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>10 double-sided activity sheets, a base plate and the cordless pen</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Builds alphabets, numbers, counting and early phonics</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Screen-free play that brings parent and child together</span></li></ul>
+
+  <div class="qtyrow"><span class="lbl">Quantity</span>
+   <div class="qty"><button onclick="qDec()" aria-label="Decrease">&minus;</button><span id="qty">1</span><button onclick="qInc()" aria-label="Increase">&plus;</button></div>
+  </div>
+  <div class="ctas">
+   <button class="btn btn-p" id="atc" onclick="addToCart()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 016 0"/></svg> Add to Cart</button>
+   <button class="btn btn-g btn-buy-desktop" onclick="buyNow()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg> Buy it now</button>
+  </div>
+
+  <div class="trustrow">
+   <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg><div><b>Free shipping</b><span>On prepaid over Rs.1000</span></div></div>
+   <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Non-toxic &amp; safe</b><span>BIS-tested materials</span></div></div>
+   <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9 9 9 0 00-7 3.5"/><path d="M3 3v4h4"/></svg><div><b>Easy 7-day returns</b><span>No-drama refunds</span></div></div>
+   <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12h3"/></svg><div><b>COD available</b><span>Pay on delivery</span></div></div>
+  </div>
+  <div class="pay">Secure checkout · <b>UPI · Cards · Net Banking · COD</b></div>
+
+  <div style="margin-top:18px">
+   <div class="acc open"><button onclick="accT(this)">Description <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="body"><div class="in"><p>Intelli Kids Phonics is an interactive learning game set powered by a unique cordless pen. The pen lights up every time your child taps the correct answer on the sheet — that little glow is your child's first step on a creative learning journey.</p><p>Designed for kids aged 2 and above (with a little parent support), it strengthens the early-learning bond while helping kids remember alphabets, numbers, counting and word associations. Once they get the hang of it, they can play and self-check on their own.</p><p>Setup is quick: place the base plate down, drop in an activity sheet, and let your child tap away with the pen. Challenge them with new and twisted alphabet formats and watch their face light up with every right answer.</p></div></div></div>
+   <div class="acc"><button onclick="accT(this)">What's in the box <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="body"><div class="in"><ul><li>1 cordless light-up pen</li><li>10 double-sided activity sheets</li><li>1 base plate</li><li>Quick setup guide</li></ul></div></div></div>
+   <div class="acc"><button onclick="accT(this)">How to play <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="body"><div class="in"><ul><li>Place the base plate on a flat surface</li><li>Put one activity sheet on the plate</li><li>Tap the circle next to the answer with the pen</li><li>The pen glows on every correct answer</li></ul></div></div></div>
+   <div class="acc"><button onclick="accT(this)">Shipping &amp; returns <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="body"><div class="in"><p>Ships within 24 hours. Most Indian cities get it in 2 to 4 days with WhatsApp + email tracking. Free shipping on prepaid orders over Rs.1000. Not a hit? Easy 7-day returns for a refund or swap.</p></div></div></div>
+   <div class="acc"><button onclick="accT(this)">Specifications <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="body"><div class="in"><table><tr><td>SKU</td><td>EKT3566</td></tr><tr><td>Age</td><td>2+ years</td></tr><tr><td>Weight</td><td>445 g</td></tr><tr><td>Type</td><td>Educational toy</td></tr><tr><td>Material</td><td>Child-safe, non-toxic</td></tr><tr><td>Availability</td><td>In stock</td></tr></table></div></div></div>
+  </div>
+ </div>
+</div></div>
+
+<div class="block"><div class="wrap">
+ <div class="shead"><span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></svg> Why parents pick it</span><h2>More than a toy</h2><p>Built to keep little hands busy and growing — no screens, no nasties.</p></div>
+ <div class="why"><div class="c"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l4-1L19 8l-3-3L4 17z"/><path d="M14 6l3 3"/></svg></div><h3>Light-up feedback</h3><p>Right answers literally light up — kids stay hooked.</p></div><div class="c"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 00-3 3 3 3 0 00-1 5 3 3 0 002 5 3 3 0 006 0V4a3 3 0 00-4 0z"/></svg></div><h3>Early literacy</h3><p>Alphabets, phonics and numbers that actually stick.</p></div><div class="c"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Safe & sturdy</h3><p>Non-toxic, BIS-tested, made for little hands.</p></div><div class="c"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></svg></div><h3>Screen-free</h3><p>Big learning, zero screen time.</p></div></div>
+</div></div>
+
+<div class="block"><div class="wrap">
+ <div class="shead"><span class="eyebrow">Skills it builds</span><h2>Learning, disguised as play</h2></div>
+ <div class="skills"><span>Phonics</span><span>Numbers</span><span>Focus</span><span>Memory</span></div>
+</div></div>
+
+<div class="block"><div class="wrap">
+ <div class="shead"><span class="eyebrow">Real reviews</span><h2>What parents say</h2></div>
+ <div class="revempty">No reviews yet — but <b>2 sold in the last 8 hours</b> and 10 parents are viewing it right now. Be the first to share how your little one liked it.</div>
+</div></div>
+
+<div class="block"><div class="wrap"><div class="faqwrap">
+ <div class="shead"><span class="eyebrow">Real questions</span><h2>Before you buy</h2></div>
+ <div class="guar" style="margin-bottom:26px">
+  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Mom-founded</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>BIS-certified safe</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>50,000+ happy kids</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>7-day returns</span>
+ </div>
+ <div class="acc"><button onclick="accT(this)">Are these toys safe for my kid?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="body"><div class="in"><p>Yes. Everything is non-toxic, BIS-tested and built for little hands. We're a mom-founded brand, so we don't list anything we wouldn't hand our own kids.</p></div></div></div><div class="acc"><button onclick="accT(this)">How fast will it reach me?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="body"><div class="in"><p>Orders ship within 24 hours and land in most Indian cities in 2 to 4 days, with tracking on WhatsApp and email.</p></div></div></div><div class="acc"><button onclick="accT(this)">What if my child isn't into it?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="body"><div class="in"><p>Easy 7-day returns, no drama. Send it back for a refund or swap it for something they'll love.</p></div></div></div><div class="acc"><button onclick="accT(this)">Do you deliver across India?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button><div class="body"><div class="in"><p>Yes, pan-India delivery. Free shipping on prepaid orders over Rs.1000, and COD is available.</p></div></div></div>
+</div></div></div>
+
+<div class="block"><div class="wrap">
+ <div class="shead"><span class="eyebrow">You may also like</span><h2>Another little win</h2></div>
+ <div class="related"><a class="relcard" href="pdp-ekt3832.html"><img src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221" alt="Weigh & Play — Practical Maths Balance"><div><b>Weigh & Play — Practical Maths Balance</b><span class="p">Rs.699</span></div><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="M9 6l6 6-6 6"/></svg></span></a></div>
+</div></div>
+
+<footer><div class="wrap">India's best online toy store · Mom-founded · <a href="index.html">Back to Extrokids</a><br>Real wooden toys, books &amp; games that build little brains. No screens required.</div></footer>
+
+<div class="sticky"><span class="sp">Rs.450</span><button class="btn btn-p" onclick="addToCart()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 016 0"/></svg> Add to Cart</button></div>
+
+<div class="ov" id="ov" onclick="closeC()"></div>
+<aside class="drawer" id="drawer">
+ <div class="dh"><h3>Your Cart</h3><button class="ib" onclick="closeC()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+ <div class="dbody" id="cbody"></div>
+ <div class="df"><div class="tot"><span>Total</span><b id="ctot">Rs.0</b></div><button class="btn btn-p" onclick="checkout()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg> Checkout</button></div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+var PROD={"n": "Cordless Light-Up Learning Pen \u2014 Intelli Kids Phonics", "p": 450, "img": "https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423", "ekt": "EKT3566"};
+var cart=[];var qty=1;
+function $(s){return document.querySelector(s);}
+function selImg(src,el){$('#mainImg').src=src;document.querySelectorAll('#thumbs img').forEach(function(t){t.classList.remove('on');});if(el)el.classList.add('on');}
+function qInc(){qty++;$('#qty').textContent=qty;}
+function qDec(){if(qty>1){qty--;$('#qty').textContent=qty;}}
+function accT(b){b.closest('.acc').classList.toggle('open');}
+function openC(){$('#drawer').classList.add('open');$('#ov').classList.add('open');}
+function closeC(){$('#drawer').classList.remove('open');$('#ov').classList.remove('open');}
+function bumpCart(){var c=$('.ic-cart');if(c&&c.animate)c.animate([{transform:'scale(1)'},{transform:'scale(1.3) rotate(-6deg)'},{transform:'scale(1)'}],{duration:440,easing:'cubic-bezier(.2,1.4,.4,1)'});}
+function toast(){var t=$('#toast');t.innerHTML='<img src="'+PROD.img+'" alt=""><div><div class="tb">ADDED TO CART</div><div class="tn">'+PROD.n+'</div></div>';t.classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(function(){t.classList.remove('show');},2600);}
+function addToCart(){for(var i=0;i<qty;i++)cart.push({n:PROD.n,p:PROD.p,img:PROD.img,ekt:PROD.ekt});renderCart();bumpCart();toast();var b=$('#atc');if(b){var o=b.innerHTML;b.classList.add('add-feedback');b.innerHTML='Added!';setTimeout(function(){b.classList.remove('add-feedback');b.innerHTML=o;},900);}var cb=$('#cb');cb.textContent=cart.length;cb.style.display='grid';}
+function buyNow(){addToCart();setTimeout(openC,300);}
+function renderCart(){var b=$('#cbody');var cb=$('#cb');cb.textContent=cart.length;cb.style.display=cart.length?'grid':'none';
+ if(!cart.length){b.innerHTML='<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 016 0"/></svg><p>Cart is empty.<br>Add some fun.</p></div>';$('#ctot').textContent='Rs.0';return;}
+ var tot=cart.reduce(function(s,p){return s+p.p;},0),FS=1000,pct=Math.min(100,Math.round(tot/FS*100)),done=tot>=FS;
+ var msg=done?'Free shipping unlocked. Nice one.':'Add Rs.'+(FS-tot)+' more for FREE shipping';
+ var ship='<div class="shipbar'+(done?' done':'')+'"><p>'+msg+'</p><div class="shiptrack"><i style="width:'+pct+'%"></i></div></div>';
+ var grp={};cart.forEach(function(p){grp[p.ekt]=grp[p.ekt]||{p:p,q:0};grp[p.ekt].q++;});
+ var rows=Object.keys(grp).map(function(k){var g=grp[k];return '<div class="ci"><img src="'+g.p.img+'" alt=""><div><b>'+g.p.n+'</b><span>Qty '+g.q+' · Rs.'+(g.p.p*g.q)+'</span></div><button class="ib" style="margin-left:auto;background:none;border:none" onclick="rmAll(\''+k+'\')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>';}).join('');
+ b.innerHTML=ship+rows;$('#ctot').textContent='Rs.'+tot;}
+function rmAll(k){cart=cart.filter(function(p){return p.ekt!==k;});renderCart();}
+function checkout(){if(!cart.length){toast2('Cart is empty');return;}confetti();toast2('Order placed — level complete');cart=[];renderCart();closeC();}
+function toast2(m){var t=$('#toast');t.innerHTML='<div><div class="tb">DONE</div><div class="tn">'+m+'</div></div>';t.classList.add('show');clearTimeout(window._tt2);window._tt2=setTimeout(function(){t.classList.remove('show');},2600);}
+function confetti(){for(var k=0;k<50;k++){(function(k){var c=document.createElement('div');c.textContent=['WIN','+1','GO','YAY','1UP'][k%5];c.style.cssText='position:fixed;left:'+(Math.random()*100)+'vw;top:-30px;z-index:130;font-family:Orbitron;font-weight:800;font-size:'+(10+Math.random()*10)+'px;color:'+['#FF4D9D','#16AEC9','#22B36A','#F2A100','#8B5CF6'][k%5]+';pointer-events:none';document.body.appendChild(c);c.animate([{transform:'translateY(0) rotate(0)',opacity:1},{transform:'translateY(110vh) rotate('+(Math.random()*720)+'deg)',opacity:.2}],{duration:2200+Math.random()*1400,easing:'ease-in'}).onfinish=function(){c.remove();};})(k);}}
+// countdown (2 days from load)
+var END=Date.now()+ (2*86400+ Math.floor(Math.random()*8)*3600)*1000;
+function tick(){var d=Math.max(0,END-Date.now()),s=Math.floor(d/1000);
+ var dd=Math.floor(s/86400),hh=Math.floor(s%86400/3600),mm=Math.floor(s%3600/60),ss=s%60;
+ function p(n){return (n<10?'0':'')+n;}
+ if($('#cdd')){$('#cdd').textContent=p(dd);$('#cdh').textContent=p(hh);$('#cdm').textContent=p(mm);$('#cds').textContent=p(ss);}}
+tick();setInterval(tick,1000);
+renderCart();
+</script>
+</body></html>
