@@ -244,6 +244,19 @@ body.loading{overflow:hidden}
 .sticky .sthumb{width:44px;height:44px;border-radius:12px;object-fit:cover;border:1px solid var(--line);background:#fff;flex:0 0 auto}
 @media(prefers-reduced-motion:reduce){.up{animation:none}.boot .lw,.boot .ins,.cur{animation:none}}
 @media(max-width:600px){.boot .lw img{height:48px}.px{width:13px;height:18px}}
+/* ===== spin the wheel ===== */
+.wheelwrap{position:relative;width:min(80vw,300px);height:min(80vw,300px);margin:0 auto}
+.pointer{position:absolute;top:-4px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:13px solid transparent;border-right:13px solid transparent;border-top:22px solid var(--red);z-index:4;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+.wheel{width:100%;height:100%;border-radius:50%;border:6px solid #fff;box-shadow:0 0 0 4px var(--purple),0 18px 44px -18px rgba(110,70,170,.6);transition:transform 4.2s cubic-bezier(.16,1,.3,1);
+ background:conic-gradient(var(--pink) 0 45deg,var(--cyan) 45deg 90deg,var(--green) 90deg 135deg,var(--yellow) 135deg 180deg,var(--purple) 180deg 225deg,var(--red) 225deg 270deg,var(--cyan) 270deg 315deg,var(--green) 315deg 360deg)}
+.lbl{position:absolute;inset:0;display:flex;justify-content:center;pointer-events:none}
+.lbl span{margin-top:15px;font-family:'Rajdhani';font-weight:700;font-size:.7rem;letter-spacing:.02em;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45);max-width:84px;text-align:center;line-height:1.05}
+.hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 4px 10px -4px rgba(0,0,0,.3);z-index:3}
+.spinrow{display:flex;justify-content:center;margin-top:26px}
+.spinrow .btn{width:auto;min-width:230px}
+.spinrow .btn:disabled{opacity:.85;cursor:default}
+.spinres{text-align:center;margin-top:16px;font-family:'Orbitron';font-weight:800;font-size:1rem;color:var(--green);opacity:0;transform:translateY(6px);transition:.4s}
+.spinres.show{opacity:1;transform:none}
 </style></head><body class="loading">
 
 <div class="boot" id="boot">
@@ -325,13 +338,24 @@ body.loading{overflow:hidden}
 </div></div>
 
 <div class="block"><div class="wrap">
- <div class="shead"><span class="eyebrow">Skills it builds</span><h2>Learning, disguised as play</h2></div>
- <div class="skills"><span>Maths</span><span>Counting</span><span>Balance</span><span>Logic</span></div>
+ <div class="shead"><span class="eyebrow">Real reviews</span><h2>What parents say</h2></div>
+ <div class="revs"><div class="rev"><div class="rtop">Rated 5 out of 5</div><p>"Useful product for preschoolers."</p><div class="who"><div class="av">S</div><div><b>Shruti Niturkar</b><span>Verified buyer</span></div></div></div><div class="rev"><div class="rtop">Rated 5 out of 5</div><p>"Amazing product. I am a teacher and my students enjoyed it a lot. Easy learning."</p><div class="who"><div class="av">J</div><div><b>Jasbir Kaur</b><span>Verified buyer</span></div></div></div></div>
 </div></div>
 
 <div class="block"><div class="wrap">
- <div class="shead"><span class="eyebrow">Real reviews</span><h2>What parents say</h2></div>
- <div class="revs"><div class="rev"><div class="rtop">Rated 5 out of 5</div><p>"Useful product for preschoolers."</p><div class="who"><div class="av">S</div><div><b>Shruti Niturkar</b><span>Verified buyer</span></div></div></div><div class="rev"><div class="rtop">Rated 5 out of 5</div><p>"Amazing product. I am a teacher and my students enjoyed it a lot. Easy learning."</p><div class="who"><div class="av">J</div><div><b>Jasbir Kaur</b><span>Verified buyer</span></div></div></div></div>
+ <div class="shead"><span class="eyebrow">Play to win</span><h2>Spin the Wheel</h2><p>One free spin, and every spin wins something. Use your code at checkout.</p></div>
+ <div class="wheelwrap">
+  <div class="pointer"></div>
+  <div class="wheel" id="wheel"><div class="lbl" style="transform:rotate(22.5deg)"><span>5% OFF</span></div><div class="lbl" style="transform:rotate(67.5deg)"><span>FREE SHIPPING</span></div><div class="lbl" style="transform:rotate(112.5deg)"><span>10% OFF</span></div><div class="lbl" style="transform:rotate(157.5deg)"><span>FREE GIFT</span></div><div class="lbl" style="transform:rotate(202.5deg)"><span>FREE STICKERS</span></div><div class="lbl" style="transform:rotate(247.5deg)"><span>15% OFF</span></div><div class="lbl" style="transform:rotate(292.5deg)"><span>EXTRA 5% OFF</span></div><div class="lbl" style="transform:rotate(337.5deg)"><span>MYSTERY BOX</span></div></div>
+  <div class="hub"></div>
+ </div>
+ <div class="spinrow"><button class="btn btn-p" id="spinbtn" onclick="spinWheel()">Spin the wheel</button></div>
+ <div class="spinres" id="spinres"></div>
+</div></div>
+
+<div class="block"><div class="wrap">
+ <div class="shead"><span class="eyebrow">Skills it builds</span><h2>Learning, disguised as play</h2></div>
+ <div class="skills"><span>Maths</span><span>Counting</span><span>Balance</span><span>Logic</span></div>
 </div></div>
 
 <div class="block"><div class="wrap">
@@ -372,6 +396,7 @@ body.loading{overflow:hidden}
 var PROD={"n": "Weigh & Play \u2014 Practical Maths Balance", "p": 699, "img": "https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221", "ekt": "EKT3832"};
 var IMGS=["https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221", "https://extrokids.com/cdn/shop/files/EKT3832_9_large.webp?v=1763442169", "https://extrokids.com/cdn/shop/files/EKT3832_2_c1d038ae-f622-4bf1-b5fb-96b9bad57e96_large.jpg?v=1763442169", "https://extrokids.com/cdn/shop/files/EKT3832_3_ce028135-5454-476b-ba18-963884b5643a_large.jpg?v=1763442169", "https://extrokids.com/cdn/shop/files/EKT3832_4_09693748-f3d6-4bfa-86a8-b1bf274516ee_large.jpg?v=1763442169", "https://extrokids.com/cdn/shop/files/EKT3832_5_8bc811d3-4449-4178-ba60-475ccb71ec49_large.jpg?v=1763442169"];
 var BUNDLE={"now": 1487, "save": 200, "img": "https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_800x.jpg?v=1757594221"};
+var PRIZES=[{"t": "5% OFF", "c": "PLAY5"}, {"t": "FREE SHIPPING", "c": "SHIPFREE"}, {"t": "10% OFF", "c": "PLAY10"}, {"t": "FREE GIFT", "c": "FREEGIFT"}, {"t": "FREE STICKERS", "c": "STICKERS"}, {"t": "15% OFF", "c": "PLAY15"}, {"t": "EXTRA 5% OFF", "c": "EXTRA5"}, {"t": "MYSTERY BOX", "c": "MYSTERY"}];var spun=false;
 var cart=[];
 function $(s){return document.querySelector(s);}
 var gi=0,gtimer=null;
@@ -392,6 +417,13 @@ function getQty(){var v=parseInt($('#qty').value,10);return v>0?v:1;}
 function addToCart(){var q=getQty();for(var i=0;i<q;i++)cart.push({n:PROD.n,p:PROD.p,img:PROD.img,ekt:PROD.ekt});renderCart();bumpCart();toast();var b=$('#atc');if(b){var o=b.innerHTML;b.classList.add('add-feedback');b.innerHTML='Added';setTimeout(function(){b.classList.remove('add-feedback');b.innerHTML=o;},900);}var cb=$('#cb');cb.textContent=cart.length;cb.style.display='grid';}
 function buyNow(){addToCart();setTimeout(openC,300);}
 function addBundle(){cart.push({n:'Upgrade Bundle (3 toys)',p:BUNDLE.now,img:BUNDLE.img,ekt:'BUNDLE-'+PROD.ekt});renderCart();bumpCart();var cb=$('#cb');cb.textContent=cart.length;cb.style.display='grid';toast2('Bundle added, you saved Rs.'+BUNDLE.save);setTimeout(openC,320);}
+function spinWheel(){if(spun)return;spun=true;
+ var n=PRIZES.length,seg=360/n,idx=Math.floor(Math.random()*n);
+ var w=document.getElementById('wheel'),btn=document.getElementById('spinbtn'),res=document.getElementById('spinres');
+ function reveal(){var p=PRIZES[idx];res.textContent='You won '+p.t+'. Use code '+p.c+' at checkout.';res.classList.add('show');btn.textContent='You won '+p.t;confetti();toast2('Prize unlocked: '+p.t);}
+ btn.textContent='Spinning...';btn.disabled=true;
+ if(rm){w.style.transition='none';w.style.transform='rotate('+(360-(idx*seg+seg/2))+'deg)';reveal();return;}
+ w.style.transform='rotate('+(5*360+(360-(idx*seg+seg/2)))+'deg)';setTimeout(reveal,4300);}
 function renderCart(){var b=$('#cbody');var cb=$('#cb');cb.textContent=cart.length;cb.style.display=cart.length?'grid':'none';
  if(!cart.length){b.innerHTML='<div class="empty">Your cart is empty.<br>Add some fun.</div>';$('#ctot').textContent='Rs.0';return;}
  var tot=cart.reduce(function(s,p){return s+p.p;},0),FS=1000,pct=Math.min(100,Math.round(tot/FS*100)),done=tot>=FS;
