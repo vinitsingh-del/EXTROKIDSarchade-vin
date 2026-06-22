@@ -207,6 +207,42 @@ footer a{color:var(--cyan)}
  .back span{display:none}
 }
 @media(max-width:480px){.trustrow{grid-template-columns:1fr}.thumbs img{width:62px;height:62px}}
+/* ===== hero border system ===== */
+.heroframe{position:relative;padding:13px;border-radius:26px;background:linear-gradient(135deg,rgba(139,92,246,.2),rgba(22,174,201,.18) 55%,rgba(255,77,157,.16));border:1px solid var(--line);box-shadow:0 22px 60px -30px rgba(110,70,170,.6)}
+.heroframe::before{content:"";position:absolute;inset:7px;border-radius:19px;border:1.5px dashed rgba(139,92,246,.4);pointer-events:none;z-index:4}
+.heroframe .bolt{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--purple);opacity:.55;z-index:5}
+.heroframe .b1{top:9px;left:9px}.heroframe .b2{top:9px;right:9px}.heroframe .b3{bottom:9px;left:9px}.heroframe .b4{bottom:9px;right:9px}
+.gmain{border-radius:17px}
+.gmain img{transition:opacity .45s ease}
+.gmain img.fade{opacity:0}
+.gwish{position:absolute;bottom:14px;right:14px;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.93);border:1px solid var(--line);display:grid;place-items:center;color:var(--pink);z-index:6;cursor:pointer;backdrop-filter:blur(4px);transition:.18s;box-shadow:0 8px 18px -8px rgba(0,0,0,.3)}
+.gwish:hover{transform:scale(1.08)}
+.gwish svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.9}
+.gwish.on{color:var(--pink)}
+.gwish.on svg{fill:var(--pink)}
+.gdots{display:flex;gap:7px;justify-content:center;margin-top:14px}
+.gdots b{width:8px;height:8px;border-radius:50%;background:var(--line);cursor:pointer;transition:.22s}
+.gdots b.on{background:var(--purple);width:22px;border-radius:5px}
+/* ===== bundle ===== */
+.bundle{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:24px;max-width:900px;margin:0 auto;box-shadow:0 18px 52px -34px rgba(110,70,170,.55)}
+.bitems{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;justify-content:center}
+.bi{flex:1;min-width:160px;background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center}
+.bi img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;background:#fff;margin-bottom:9px}
+.bi b{font-family:'Rajdhani';font-weight:700;font-size:.82rem;display:block;line-height:1.25;color:var(--ink);margin-bottom:3px}
+.bi span{font-family:'Orbitron';font-weight:800;font-size:.82rem;color:var(--cyan)}
+.bplus{display:flex;align-items:center;font-family:'Orbitron';font-weight:900;font-size:1.6rem;color:var(--purple)}
+.bsum{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px dashed var(--line)}
+.bsum .bp{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.bsum .was{color:var(--mut);text-decoration:line-through;font-size:1.05rem}
+.bsum .now{font-family:'Orbitron';font-weight:900;font-size:1.7rem;color:var(--ink)}
+.bsum .save{font-family:'Orbitron';font-weight:800;font-size:.7rem;color:#fff;background:var(--green);padding:5px 9px;border-radius:8px}
+.bsum .btn{width:auto;flex:1;min-width:210px}
+@media(max-width:560px){.bplus{transform:rotate(90deg);align-self:center}.bi{min-width:100%}}
+/* ===== sticky CTA -> rounded remote console ===== */
+.sticky{left:12px;right:12px;bottom:12px;border-radius:24px;border:1px solid var(--line);border-top:1px solid var(--line);padding:11px 12px 11px 16px;gap:12px;background:linear-gradient(180deg,rgba(255,255,255,.97),rgba(245,238,253,.97));box-shadow:0 16px 36px -14px rgba(110,70,170,.55),inset 0 1px 0 rgba(255,255,255,.7)}
+.sticky::before{content:"";width:9px;height:9px;border-radius:50%;flex-shrink:0;background:radial-gradient(circle at 35% 35%,#3ee07f,#0c8048);box-shadow:0 0 7px rgba(34,179,106,.8),16px 0 0 -1px var(--yellow),32px 0 0 -1px var(--pink);margin-right:34px}
+.sticky .sp{font-family:'Orbitron';font-weight:900;font-size:1.08rem;margin-right:auto}
+.sticky .btn{border-radius:16px;padding:13px 20px;box-shadow:0 8px 18px -8px var(--pink),inset 0 1px 0 rgba(255,255,255,.45)}
 </style></head><body>
 
 <header><div class="wrap hdr">
@@ -219,13 +255,18 @@ footer a{color:var(--cyan)}
 
 <div class="pdp">
  <div class="gallery">
-  <div class="gmain"><div class="gbadge"><span class="bsale">FLASH SALE</span><span class="bnew">NEW</span></div><img id="mainImg" src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423" alt="Cordless Light-Up Learning Pen — Intelli Kids Phonics"></div>
-  <div class="thumbs" id="thumbs"><img src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423" onclick="selImg(this.src,this)" class="on" alt="view"><img src="https://extrokids.com/cdn/shop/files/EKT3566_1_c638e2d4-ab86-437f-9077-23f5f4a2dd73_large.jpg?v=1763818423" onclick="selImg(this.src,this)" alt="view"><img src="https://extrokids.com/cdn/shop/files/EKT3566_5_large.jpg?v=1763818448" onclick="selImg(this.src,this)" alt="view"><img src="https://extrokids.com/cdn/shop/files/EKT3566_3_e0f1e759-3757-4433-8db5-487aab580aba_large.jpg?v=1763818448" onclick="selImg(this.src,this)" alt="view"></div>
+  <div class="heroframe"><span class="bolt b1"></span><span class="bolt b2"></span><span class="bolt b3"></span><span class="bolt b4"></span>
+   <div class="gmain"><div class="gbadge"><span class="bsale">FLASH SALE</span><span class="bnew">NEW</span></div><img id="mainImg" src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423" alt="Cordless Light-Up Learning Pen — Intelli Kids Phonics">
+    <button class="gwish" id="gwish" onclick="wishToggle()" aria-label="Save to wishlist"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20S4 15 4 9a4 4 0 017.6-1.8A4 4 0 0119 9c0 6-7 11-7 11z"/></svg></button>
+   </div>
+  </div>
+  <div class="gdots" id="gdots"></div>
+  <div class="thumbs" id="thumbs"><img src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423" onclick="goImg(0)" class="on" alt="view"><img src="https://extrokids.com/cdn/shop/files/EKT3566_1_c638e2d4-ab86-437f-9077-23f5f4a2dd73_large.jpg?v=1763818423" onclick="goImg(1)" alt="view"><img src="https://extrokids.com/cdn/shop/files/EKT3566_5_large.jpg?v=1763818448" onclick="goImg(2)" alt="view"><img src="https://extrokids.com/cdn/shop/files/EKT3566_3_e0f1e759-3757-4433-8db5-487aab580aba_large.jpg?v=1763818448" onclick="goImg(3)" alt="view"></div>
  </div>
  <div class="buy">
+  <div class="rate" style="margin-bottom:8px"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg></span><span class="pill">New arrival · be the first to review</span></div>
   <span class="eyebrow">Interactive phonics · Ages 2+</span>
   <h1>Cordless Light-Up Learning Pen — Intelli Kids Phonics</h1>
-  <div class="rate"><span class="stars"><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg><svg viewBox="0 0 24 24" class="stz on"><path d="M12 3l2.6 5.8 6.4.6-4.8 4.3 1.4 6.3L12 17l-5.6 3 1.4-6.3L3 9.4l6.4-.6z"/></svg></span><span class="pill">New arrival · be the first to review</span></div>
   <div class="social">
    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s5 4 5 9a5 5 0 01-10 0c0-2 1-3 1-3s0 2 2 2c1.5 0 1-3 2-9z"/></svg> 2 sold in the last 8 hours</span>
    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg> 10 people viewing now</span>
@@ -296,6 +337,17 @@ footer a{color:var(--cyan)}
 </div></div></div>
 
 <div class="block"><div class="wrap">
+ <div class="shead"><span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M18 6l-2.5 2.5M8.5 15.5L6 18"/></svg> Bundle &amp; save</span><h2>Upgrade your Toy Collection</h2><p>Three little wins in one box — grab the set and save more than buying solo.</p></div>
+ <div class="bundle">
+  <div class="bitems"><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_800x.jpg?v=1763818423" alt="Cordless Light-Up Learning Pen"><b>Cordless Light-Up Learning Pen</b><span>Rs.450</span></div><div class="bplus">+</div><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_800x.jpg?v=1757594221" alt="Weigh &amp; Play Maths Balance"><b>Weigh &amp; Play Maths Balance</b><span>Rs.699</span></div><div class="bplus">+</div><div class="bi"><img src="https://extrokids.com/cdn/shop/products/EKT3072B_800x.jpg?v=1708350693" alt="Face Change Wooden Rubik's Cube"><b>Face Change Wooden Rubik's Cube</b><span>Rs.404</span></div></div>
+  <div class="bsum">
+   <div class="bp"><span class="was">Rs.1553</span><span class="now">Rs.1363</span><span class="save">Save Rs.190</span></div>
+   <button class="btn btn-p" onclick="addBundle()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 016 0"/></svg> Add all 3 to cart</button>
+  </div>
+ </div>
+</div></div>
+
+<div class="block"><div class="wrap">
  <div class="shead"><span class="eyebrow">You may also like</span><h2>Another little win</h2></div>
  <div class="related"><a class="relcard" href="pdp-ekt3832.html"><img src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221" alt="Weigh & Play — Practical Maths Balance"><div><b>Weigh & Play — Practical Maths Balance</b><span class="p">Rs.699</span></div><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="M9 6l6 6-6 6"/></svg></span></a></div>
 </div></div>
@@ -314,9 +366,20 @@ footer a{color:var(--cyan)}
 
 <script>
 var PROD={"n": "Cordless Light-Up Learning Pen \u2014 Intelli Kids Phonics", "p": 450, "img": "https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423", "ekt": "EKT3566"};
+var IMGS=["https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423", "https://extrokids.com/cdn/shop/files/EKT3566_1_c638e2d4-ab86-437f-9077-23f5f4a2dd73_large.jpg?v=1763818423", "https://extrokids.com/cdn/shop/files/EKT3566_5_large.jpg?v=1763818448", "https://extrokids.com/cdn/shop/files/EKT3566_3_e0f1e759-3757-4433-8db5-487aab580aba_large.jpg?v=1763818448"];
+var BUNDLE={"now": 1363, "save": 190, "img": "https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_800x.jpg?v=1763818423"};
 var cart=[];var qty=1;
 function $(s){return document.querySelector(s);}
-function selImg(src,el){$('#mainImg').src=src;document.querySelectorAll('#thumbs img').forEach(function(t){t.classList.remove('on');});if(el)el.classList.add('on');}
+var gi=0,gtimer=null;
+var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function buildDots(){var d=$('#gdots');if(!d)return;d.innerHTML=IMGS.map(function(_,i){return '<b class="'+(i===0?'on':'')+'" onclick="goImg('+i+')"></b>';}).join('');}
+function setActive(i){document.querySelectorAll('#thumbs img').forEach(function(t,k){t.classList.toggle('on',k===i);});document.querySelectorAll('#gdots b').forEach(function(b,k){b.classList.toggle('on',k===i);});}
+function showImg(i){gi=(i+IMGS.length)%IMGS.length;var m=$('#mainImg');m.classList.add('fade');setTimeout(function(){m.src=IMGS[gi];m.classList.remove('fade');},200);setActive(gi);}
+function nextImg(){showImg(gi+1);}
+function restart(){if(rm||IMGS.length<2)return;clearInterval(gtimer);gtimer=setInterval(nextImg,3800);}
+function goImg(i){showImg(i);restart();}
+function wishToggle(){var w=$('#gwish');if(!w)return;w.classList.toggle('on');toast2(w.classList.contains('on')?'Saved to your wishlist':'Removed from wishlist');}
+function addBundle(){cart.push({n:'Upgrade Bundle (3 toys)',p:BUNDLE.now,img:BUNDLE.img,ekt:'BUNDLE-'+PROD.ekt});renderCart();bumpCart();var cb=$('#cb');cb.textContent=cart.length;cb.style.display='grid';toast2('Bundle added — you saved Rs.'+BUNDLE.save);setTimeout(openC,320);}
 function qInc(){qty++;$('#qty').textContent=qty;}
 function qDec(){if(qty>1){qty--;$('#qty').textContent=qty;}}
 function accT(b){b.closest('.acc').classList.toggle('open');}
@@ -345,6 +408,7 @@ function tick(){var d=Math.max(0,END-Date.now()),s=Math.floor(d/1000);
  function p(n){return (n<10?'0':'')+n;}
  if($('#cdd')){$('#cdd').textContent=p(dd);$('#cdh').textContent=p(hh);$('#cdm').textContent=p(mm);$('#cds').textContent=p(ss);}}
 tick();setInterval(tick,1000);
+buildDots();setActive(0);restart();
 renderCart();
 </script>
 </body></html>
