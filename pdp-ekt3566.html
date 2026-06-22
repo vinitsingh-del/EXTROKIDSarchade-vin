@@ -170,6 +170,9 @@ header{position:sticky;top:0;z-index:45;background:rgba(255,255,255,.85);backdro
 .sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:44;display:none;align-items:center;gap:14px;background:linear-gradient(180deg,rgba(255,255,255,.97),rgba(245,238,253,.97));border:1px solid var(--line);border-radius:22px;padding:11px 13px 11px 18px;box-shadow:0 16px 36px -14px rgba(110,70,170,.55),inset 0 1px 0 rgba(255,255,255,.7)}
 .sticky .sp{font-family:'Orbitron';font-weight:900;font-size:1.1rem;letter-spacing:.01em;margin-right:auto}
 .sticky .btn{width:auto;flex:0 0 auto;padding:13px 24px;border-radius:15px}
+.sticky .sbtn{padding:12px 15px;font-size:.82rem;border-radius:14px}
+@media(max-width:560px){.sticky{gap:9px;padding-left:13px}.sticky .sp{font-size:.92rem}.sticky .sbtn{padding:12px 13px}}
+@media(max-width:400px){.sticky .sp{display:none}}
 /* footer */
 footer{background:var(--bg2);border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--mut);font-family:'Rajdhani';font-weight:600;font-size:.86rem;line-height:1.7}
 footer a{color:var(--cyan)}
@@ -207,7 +210,6 @@ footer a{color:var(--cyan)}
  .why{grid-template-columns:repeat(2,1fr)}
  .revs{grid-template-columns:1fr}
  .sticky{display:flex}
- .ctas .btn-buy-desktop{display:none}
  body{padding-bottom:78px}
 }
 @media(max-width:560px){.bitems{grid-template-columns:1fr}.trustrow{grid-template-columns:1fr}.thumbs img{width:62px;height:62px}}
@@ -378,7 +380,7 @@ body.loading{overflow:hidden}
 
 <footer><div class="wrap">India&#39;s best online toy store — mom-founded — <a href="index.html">back to Extrokids</a><br>Real wooden toys, books and games that build little brains. No screens required.</div></footer>
 
-<div class="sticky"><img class="sthumb" src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423" alt=""><span class="sp">Rs.450</span><button class="btn btn-p" onclick="addToCart()">Add to Cart</button></div>
+<div class="sticky"><img class="sthumb" src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_large.jpg?v=1763818423" alt=""><span class="sp">Rs.450</span><button class="btn btn-g sbtn" onclick="addToCart()">Add</button><button class="btn btn-p sbtn" onclick="buyNow()">Buy Now</button></div>
 
 <button class="spinbtn" onclick="openSpin()">DAILY SPIN</button>
 <div class="spinmodal" id="spinmodal">
