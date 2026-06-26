@@ -318,6 +318,11 @@ body.loading{overflow:hidden}
 .crec .pr{font-size:.74rem;color:var(--cyan);font-family:'Orbitron';font-weight:800}
 .crec .addrec{margin-left:auto;font-family:'Rajdhani';font-weight:800;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--purple);border:none;border-radius:9px;padding:8px 11px;cursor:pointer}
 .cktrust{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;margin-top:12px;font-family:'Rajdhani';font-weight:700;font-size:.74rem;color:var(--mut)}
+/* ===== scroll reveal (on-scroll animation) ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal:nth-child(2){transition-delay:.06s}.reveal:nth-child(3){transition-delay:.12s}.reveal:nth-child(4){transition-delay:.18s}.reveal:nth-child(5){transition-delay:.24s}.reveal:nth-child(6){transition-delay:.3s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important}}
 </style></head><body class="loading">
 
 <div class="boot" id="boot">
@@ -394,9 +399,9 @@ body.loading{overflow:hidden}
 </div></div>
 
 <div class="block" style="border-top:none;padding-top:6px"><div class="wrap">
- <div class="shead"><span class="eyebrow">Frequently bought together</span><h2>Complete the set and save</h2><p>Parents who bought this usually grab these too.</p></div>
+ <div class="shead reveal"><span class="eyebrow">Frequently bought together</span><h2>Complete the set and save</h2><p>Parents who bought this usually grab these too.</p></div>
  <div class="fbt">
-  <div class="bitems"><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_800x.jpg?v=1763818423" alt="Cordless Light-Up Learning Pen"><b>Cordless Light-Up Learning Pen</b><span>Rs.450</span></div><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_800x.jpg?v=1757594221" alt="Weigh &amp; Play Maths Balance"><b>Weigh &amp; Play Maths Balance</b><span>Rs.699</span></div><div class="bi"><img src="https://extrokids.com/cdn/shop/products/EKT3072B_800x.jpg?v=1708350693" alt="Face Change Wooden Rubik's Cube"><b>Face Change Wooden Rubik's Cube</b><span>Rs.404</span></div></div>
+  <div class="bitems"><div class="bi reveal"><img src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_800x.jpg?v=1763818423" alt="Cordless Light-Up Learning Pen"><b>Cordless Light-Up Learning Pen</b><span>Rs.450</span></div><div class="bi reveal"><img src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_800x.jpg?v=1757594221" alt="Weigh &amp; Play Maths Balance"><b>Weigh &amp; Play Maths Balance</b><span>Rs.699</span></div><div class="bi reveal"><img src="https://extrokids.com/cdn/shop/products/EKT3072B_800x.jpg?v=1708350693" alt="Face Change Wooden Rubik's Cube"><b>Face Change Wooden Rubik's Cube</b><span>Rs.404</span></div></div>
   <div class="bsum">
    <div class="bp"><span class="was">Rs.1553</span><span class="now">Rs.1363</span><span class="save">Save Rs.190</span></div>
    <button class="btn btn-p" onclick="addBundle()">Add all 3 to cart</button>
@@ -405,34 +410,34 @@ body.loading{overflow:hidden}
 </div></div>
 
 <div class="block"><div class="wrap">
- <div class="shead"><span class="eyebrow">Why parents pick it</span><h2>More than a toy</h2><p>Built to keep little hands busy and growing, with no screens and nothing nasty.</p></div>
- <div class="why"><div class="c"><span class="num">01</span><h3>Light-up feedback</h3><p>Right answers light up, so kids stay hooked.</p></div><div class="c"><span class="num">02</span><h3>Early literacy</h3><p>Alphabets, phonics and numbers that actually stick.</p></div><div class="c"><span class="num">03</span><h3>Safe and sturdy</h3><p>Non-toxic, BIS-tested, made for little hands.</p></div><div class="c"><span class="num">04</span><h3>Screen-free</h3><p>Big learning with zero screen time.</p></div></div>
+ <div class="shead reveal"><span class="eyebrow">Why parents pick it</span><h2>More than a toy</h2><p>Built to keep little hands busy and growing, with no screens and nothing nasty.</p></div>
+ <div class="why"><div class="c reveal"><span class="num">01</span><h3>Light-up feedback</h3><p>Right answers light up, so kids stay hooked.</p></div><div class="c reveal"><span class="num">02</span><h3>Early literacy</h3><p>Alphabets, phonics and numbers that actually stick.</p></div><div class="c reveal"><span class="num">03</span><h3>Safe and sturdy</h3><p>Non-toxic, BIS-tested, made for little hands.</p></div><div class="c reveal"><span class="num">04</span><h3>Screen-free</h3><p>Big learning with zero screen time.</p></div></div>
 </div></div>
 
 <div class="block"><div class="wrap">
- <div class="shead"><span class="eyebrow">Real reviews</span><h2>What parents say</h2></div>
- <div class="revs"><div class="rev"><div class="rtop">Rated 5 out of 5</div><p>"My son learnt his letters so much faster, the light-up bit keeps him going."</p><div class="who"><div class="av">R</div><div><b>Ritika S.</b><span>Verified buyer</span></div></div></div><div class="rev"><div class="rtop">Rated 5 out of 5</div><p>"Great for car rides and quiet time. No screen and he still loves it."</p><div class="who"><div class="av">N</div><div><b>Neha T.</b><span>Verified buyer</span></div></div></div></div>
+ <div class="shead reveal"><span class="eyebrow">Real reviews</span><h2>What parents say</h2></div>
+ <div class="revs"><div class="rev reveal"><div class="rtop">Rated 5 out of 5</div><p>"My son learnt his letters so much faster, the light-up bit keeps him going."</p><div class="who"><div class="av">R</div><div><b>Ritika S.</b><span>Verified buyer</span></div></div></div><div class="rev reveal"><div class="rtop">Rated 5 out of 5</div><p>"Great for car rides and quiet time. No screen and he still loves it."</p><div class="who"><div class="av">N</div><div><b>Neha T.</b><span>Verified buyer</span></div></div></div></div>
 </div></div>
 
 <div class="block"><div class="wrap">
- <div class="shead"><span class="eyebrow">Loved by moms</span><h2>From our parent community</h2><p>Real love from the mums who shop with us.</p></div>
- <div class="moms"><div class="mom"><p>"Finally a toy that keeps my daughter off the iPad. She actually asks to play with it after school."</p><div class="who"><div class="av">A</div><div><b>Ananya R.</b><span>Mum of a 4-year-old</span></div></div></div><div class="mom"><p>"Quality is lovely and it arrived in two days. You can tell it is made for small hands."</p><div class="who"><div class="av">P</div><div><b>Priya M.</b><span>Mum of twins</span></div></div></div><div class="mom"><p>"A friend recommended it and now I gift it at every birthday party in our building."</p><div class="who"><div class="av">S</div><div><b>Sneha K.</b><span>Mum of a 3-year-old</span></div></div></div></div>
+ <div class="shead reveal"><span class="eyebrow">Loved by moms</span><h2>From our parent community</h2><p>Real love from the mums who shop with us.</p></div>
+ <div class="moms"><div class="mom reveal"><p>"Finally a toy that keeps my daughter off the iPad. She actually asks to play with it after school."</p><div class="who"><div class="av">A</div><div><b>Ananya R.</b><span>Mum of a 4-year-old</span></div></div></div><div class="mom reveal"><p>"Quality is lovely and it arrived in two days. You can tell it is made for small hands."</p><div class="who"><div class="av">P</div><div><b>Priya M.</b><span>Mum of twins</span></div></div></div><div class="mom reveal"><p>"A friend recommended it and now I gift it at every birthday party in our building."</p><div class="who"><div class="av">S</div><div><b>Sneha K.</b><span>Mum of a 3-year-old</span></div></div></div></div>
 </div></div>
 
 <div class="block"><div class="wrap">
- <div class="shead"><span class="eyebrow">Skills and learning</span><h2>What your child builds</h2><p>Play that quietly grows real developmental skills.</p></div>
- <div class="devskills"><div class="dsk"><b>Cognitive</b><span>Letter and number recognition that builds early reading.</span></div><div class="dsk"><b>Language</b><span>Phonics and vocabulary through playful repetition.</span></div><div class="dsk"><b>Focus</b><span>Sustained attention as kids hunt for the right answer.</span></div><div class="dsk"><b>Fine motor</b><span>Precise pen control and hand-eye coordination.</span></div><div class="dsk"><b>Confidence</b><span>Light-up feedback makes every right answer feel like a win.</span></div><div class="dsk"><b>Independence</b><span>Self-checking play they can do on their own.</span></div></div>
+ <div class="shead reveal"><span class="eyebrow">Skills and learning</span><h2>What your child builds</h2><p>Play that quietly grows real developmental skills.</p></div>
+ <div class="devskills"><div class="dsk reveal"><b>Cognitive</b><span>Letter and number recognition that builds early reading.</span></div><div class="dsk reveal"><b>Language</b><span>Phonics and vocabulary through playful repetition.</span></div><div class="dsk reveal"><b>Focus</b><span>Sustained attention as kids hunt for the right answer.</span></div><div class="dsk reveal"><b>Fine motor</b><span>Precise pen control and hand-eye coordination.</span></div><div class="dsk reveal"><b>Confidence</b><span>Light-up feedback makes every right answer feel like a win.</span></div><div class="dsk reveal"><b>Independence</b><span>Self-checking play they can do on their own.</span></div></div>
 </div></div>
 
 <div class="block"><div class="wrap"><div class="faqwrap">
- <div class="shead"><span class="eyebrow">Real questions</span><h2>Before you buy</h2></div>
+ <div class="shead reveal"><span class="eyebrow">Real questions</span><h2>Before you buy</h2></div>
  <div class="guar" style="margin-bottom:26px"><span>Mom-founded</span><span>BIS-certified safe</span><span>Over 50,000 happy kids</span><span>7-day returns</span></div>
  <div class="acc"><button onclick="accT(this)">Are these toys safe for my kid?<em>Show</em></button><div class="body"><div class="in"><p>Yes. Everything is non-toxic, BIS-tested and built for little hands. We are a mom-founded brand, so we do not list anything we would not hand our own kids.</p></div></div></div><div class="acc"><button onclick="accT(this)">How fast will it reach me?<em>Show</em></button><div class="body"><div class="in"><p>Orders ship within 24 hours and land in most Indian cities in 2 to 4 days, with tracking on WhatsApp and email.</p></div></div></div><div class="acc"><button onclick="accT(this)">What if my child is not into it?<em>Show</em></button><div class="body"><div class="in"><p>Easy 7-day returns, no drama. Send it back for a refund or swap it for something they will love.</p></div></div></div><div class="acc"><button onclick="accT(this)">Do you deliver across India?<em>Show</em></button><div class="body"><div class="in"><p>Yes, pan-India delivery. Free shipping on prepaid orders over Rs.1000, and cash on delivery is available.</p></div></div></div>
 </div></div></div>
 
 <div class="block"><div class="wrap">
- <div class="shead"><span class="eyebrow">You may also like</span><h2>Another little win</h2></div>
- <div class="related"><a class="relcard" href="pdp-ekt3832.html"><img src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221" alt="Weigh & Play — Practical Maths Balance"><div><b>Weigh & Play — Practical Maths Balance</b><span class="p">Rs.699</span></div><span class="go">View</span></a></div>
+ <div class="shead reveal"><span class="eyebrow">You may also like</span><h2>Another little win</h2></div>
+ <div class="related"><a class="relcard reveal" href="pdp-ekt3832.html"><img src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221" alt="Weigh & Play — Practical Maths Balance"><div><b>Weigh & Play — Practical Maths Balance</b><span class="p">Rs.699</span></div><span class="go">View</span></a></div>
 </div></div>
 
 <footer><div class="wrap">India&#39;s best online toy store — mom-founded — <a href="index.html">back to Extrokids</a><br>Real wooden toys, books and games that build little brains. No screens required.</div></footer>
@@ -533,6 +538,10 @@ tick();setInterval(tick,1000);
 setActive(0);restart();
 var _as=$('#agesel');if(_as){_as.value=(PROD.ageDefault||'3-6');}updateGift();
 renderCart();
+(function(){var els=document.querySelectorAll('.reveal');
+ if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+ var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+ els.forEach(function(e){io.observe(e);});})();
 function startTW(){var el=document.getElementById('twout');if(!el||el.dataset.done)return;el.dataset.done='1';
  var p=document.getElementById('tw');var txt=p?p.getAttribute('data-text'):'';
  if(rm){el.textContent=txt;return;}
