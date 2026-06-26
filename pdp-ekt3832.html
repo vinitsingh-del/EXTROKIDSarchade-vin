@@ -266,6 +266,58 @@ body.loading{overflow:hidden}
 .spinres{font-family:'Press Start 2P';font-size:11px;color:var(--green);min-height:14px;margin-bottom:14px}
 @media(max-width:860px){.spinbtn{bottom:86px}}
 @media(prefers-reduced-motion:reduce){.spinbtn{animation:none}}
+/* ===== units sold + age + usp strip ===== */
+.soldpill{color:var(--green)!important;font-weight:700;background:rgba(34,179,106,.1);border:1px solid var(--line);border-radius:20px;padding:3px 11px}
+.qtyrow{flex-wrap:wrap;gap:18px}
+.qcol{display:flex;flex-direction:column;gap:6px}
+.qcol .lbl{font-size:.78rem}
+.uspstrip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 12px}
+.uspstrip .u{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px 8px;text-align:center}
+.uspstrip .u b{display:block;font-family:'Rajdhani';font-weight:700;font-size:.78rem;line-height:1.25;color:var(--ink)}
+.uspstrip .u span{font-family:'Rajdhani';font-weight:500;font-size:.68rem;color:var(--mut)}
+.giftnote{background:rgba(242,161,0,.12);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-family:'Rajdhani';font-weight:700;font-size:.84rem;color:var(--ink);margin-bottom:6px}
+.giftnote:empty{display:none}
+@media(max-width:560px){.uspstrip{grid-template-columns:repeat(2,1fr)}}
+/* ===== FBT (uses bundle item styles) ===== */
+.fbt{background:var(--panel);border:1px solid var(--line);border-radius:24px;padding:24px;max-width:900px;margin:0 auto;box-shadow:0 18px 52px -34px rgba(110,70,170,.5)}
+/* ===== dev skills ===== */
+.devskills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:920px;margin:0 auto}
+.dsk{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:14px;padding:18px}
+.dsk b{font-family:'Orbitron';font-weight:800;font-size:.9rem;display:block;margin-bottom:7px;color:var(--ink)}
+.dsk span{font-size:.84rem;color:var(--mut);line-height:1.5}
+@media(max-width:760px){.devskills{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.devskills{grid-template-columns:1fr}}
+/* ===== loved by moms ===== */
+.moms{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:920px;margin:0 auto}
+.mom{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}
+.mom p{font-size:.92rem;line-height:1.55;margin-bottom:13px;color:var(--ink)}
+.mom .who{display:flex;align-items:center;gap:11px}
+.mom .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;display:grid;place-items:center;font-family:'Orbitron';font-weight:800;font-size:.85rem}
+.mom .who b{font-size:.85rem;display:block}
+.mom .who span{font-size:.72rem;color:var(--mut);font-family:'Rajdhani';font-weight:700}
+@media(max-width:760px){.moms{grid-template-columns:1fr}}
+/* ===== whatsapp ===== */
+.wa{position:fixed;left:16px;bottom:18px;z-index:46;font-family:'Orbitron';font-weight:800;font-size:.72rem;letter-spacing:.03em;padding:13px 16px;border-radius:14px;border:none;cursor:pointer;background:#22B36A;color:#fff;box-shadow:0 8px 22px -8px rgba(34,179,106,.8)}
+.wa:hover{transform:translateY(-2px)}
+@media(max-width:860px){.wa{bottom:86px}}
+/* ===== image zoom ===== */
+.gmain{cursor:zoom-in}
+.gmain img{transition:opacity .45s ease,transform .35s ease}
+.gmain:hover img{transform:scale(1.07)}
+.zoomov{position:fixed;inset:0;z-index:130;display:none;place-items:center;background:rgba(11,10,31,.92);padding:20px;cursor:zoom-out}
+.zoomov.open{display:grid}
+.zoomov img{max-width:96vw;max-height:92vh;border-radius:12px;box-shadow:0 20px 60px -20px #000}
+/* ===== cart upgrades ===== */
+.cgift{background:rgba(242,161,0,.12);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}
+.cgift b{font-size:.82rem;display:block;line-height:1.3}
+.cgift span{font-size:.7rem;color:var(--green);font-family:'Orbitron';font-weight:800;letter-spacing:.04em}
+.crlabel{font-family:'Rajdhani';font-weight:700;font-size:.78rem;color:var(--mut);margin:6px 0 8px}
+.crec{background:var(--panel);border:1px dashed var(--line);border-radius:12px;padding:11px;display:flex;gap:11px;align-items:center;margin-bottom:10px}
+.crec img{width:44px;height:44px;border-radius:9px;object-fit:cover;background:#fff}
+.crec b{font-size:.8rem;display:block;line-height:1.2}
+.crec .pr{font-size:.74rem;color:var(--cyan);font-family:'Orbitron';font-weight:800}
+.crec .addrec{margin-left:auto;font-family:'Rajdhani';font-weight:800;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--purple);border:none;border-radius:9px;padding:8px 11px;cursor:pointer}
+.cktrust{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;margin-top:12px;font-family:'Rajdhani';font-weight:700;font-size:.74rem;color:var(--mut)}
 </style></head><body class="loading">
 
 <div class="boot" id="boot">
@@ -286,7 +338,7 @@ body.loading{overflow:hidden}
 <div class="pdp">
  <div class="gallery">
   <div class="heroframe">
-   <div class="gmain"><div class="gbadge"><span class="bsale">FLASH SALE</span></div><img id="mainImg" src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221" alt="Weigh & Play — Practical Maths Balance">
+   <div class="gmain"><div class="gbadge"><span class="bsale">FLASH SALE</span></div><img id="mainImg" src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221" alt="Weigh & Play — Practical Maths Balance" onclick="openZoom()">
     <button class="gwish" id="gwish" onclick="wishToggle()">Save</button>
    </div>
   </div>
@@ -296,7 +348,7 @@ body.loading{overflow:hidden}
   <div class="rate"><span class="rnum">5.0</span><span class="rtxt">out of 5, based on 2 reviews</span><span class="rpill">Teacher-approved</span></div>
   <span class="eyebrow">Hands-on maths — ages 3 and up</span>
   <h1>Weigh & Play — Practical Maths Balance</h1>
-  <div class="social"><span>2 sold in the last 8 hours</span><span>10 people viewing now</span></div>
+  <div class="social"><span class="soldpill">2,500+ sold</span><span>2 sold in the last 8 hours</span><span>10 viewing now</span></div>
   <div class="price"><span class="now">Rs.699</span></div>
   <div class="taxline">Inclusive of all taxes — flash sale price</div>
 
@@ -313,21 +365,21 @@ body.loading{overflow:hidden}
 
   <div class="usp"><div class="up"><span class="upn">01</span><span class="upt">A real balance scale that turns maths into a game kids beg to play</span></div><div class="up"><span class="upn">02</span><span class="upt">Comes loaded with 1 balance, 20 weights, a mascot, 10 number tiles and 30 cards</span></div><div class="up"><span class="upn">03</span><span class="upt">Builds counting, addition and fine motor skills together</span></div><div class="up"><span class="upn">04</span><span class="upt">Loved by preschool teachers for hands-on learning</span></div></div>
 
-  <div class="qtyrow"><span class="lbl">Quantity</span>
-   <select class="qsel" id="qty"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
+  <div class="qtyrow">
+   <div class="qcol"><span class="lbl">Quantity</span><select class="qsel" id="qty"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div>
+   <div class="qcol"><span class="lbl">Child&#39;s age</span><select class="qsel" id="agesel" onchange="updateGift()"><option value="1-3">1 to 3 years</option><option value="3-6">3 to 6 years</option></select></div>
   </div>
   <div class="ctas">
    <button class="btn btn-p" id="atc" onclick="addToCart()">Add to Cart</button>
    <button class="btn btn-g btn-buy-desktop" onclick="buyNow()">Buy it now</button>
   </div>
-
-  <div class="trustrow">
-   <div class="t"><b>Free shipping</b><span>On prepaid orders over Rs.1000</span></div>
-   <div class="t"><b>Non-toxic and safe</b><span>BIS-tested materials</span></div>
-   <div class="t"><b>Easy 7-day returns</b><span>No-drama refunds</span></div>
-   <div class="t"><b>Cash on delivery</b><span>Pay when it arrives</span></div>
+  <div class="uspstrip">
+   <div class="u"><b>Free Shipping</b><span>Over Rs.1000</span></div>
+   <div class="u"><b>Easy Returns</b><span>7 days</span></div>
+   <div class="u"><b>Quality Assured</b><span>BIS-tested</span></div>
+   <div class="u"><b>Secure Payment</b><span>UPI / Cards / COD</span></div>
   </div>
-  <div class="pay">Secure checkout — <b>UPI, Cards, Net Banking and COD</b></div>
+  <div class="giftnote" id="giftnote"></div>
 
   <div class="infozone" style="margin-top:22px">
    <div class="screen"><div class="scanlines"></div><div class="scrlabel">GAME INFO</div><p class="tw" id="tw" data-text="Real maths, played not memorised. Kids balance weights against number tiles and crack little problems on their own. In the box: balance, 20 weights, a mascot, 10 tiles and 30 cards."><span id="twout"></span><span class="cur"></span></p></div>
@@ -335,8 +387,19 @@ body.loading{overflow:hidden}
     <div class="acc"><button onclick="accT(this)">What is in the box<em>Show</em></button><div class="body"><div class="in"><ul><li>1 weighing balance</li><li>20 sugarcane or banana weights</li><li>1 monkey or elephant mascot</li><li>10 number tiles</li><li>30 learning cards</li></ul></div></div></div>
     <div class="acc"><button onclick="accT(this)">How to play<em>Show</em></button><div class="body"><div class="in"><ul><li>Calibrate by keeping the balance level and empty</li><li>Add a few weights to tray one</li><li>Balance them with number tiles in tray two</li><li>Solve the card and watch the maths click</li></ul></div></div></div>
     <div class="acc"><button onclick="accT(this)">Shipping and returns<em>Show</em></button><div class="body"><div class="in"><p>Ships within 24 hours. Most Indian cities get it in 2 to 4 days with tracking on WhatsApp and email. Free shipping on prepaid orders over Rs.1000. Not a hit? Easy 7-day returns for a refund or swap.</p></div></div></div>
-    <div class="acc"><button onclick="accT(this)">Specifications<em>Show</em></button><div class="body"><div class="in"><table><tr><td>SKU</td><td>EKT3832</td></tr><tr><td>Age</td><td>3 years and up</td></tr><tr><td>Weight</td><td>555 g</td></tr><tr><td>Type</td><td>Educational toy</td></tr><tr><td>Material</td><td>Durable, child-safe</td></tr><tr><td>Note</td><td>1 pc, random mascot design shipped</td></tr></table></div></div></div>
+    <div class="acc"><button onclick="accT(this)">Specifications<em>Show</em></button><div class="body"><div class="in"><table><tr><td>Product dimensions</td><td>26 x 20 x 6 cm (pack)</td></tr><tr><td>Weight</td><td>555 g</td></tr><tr><td>Battery</td><td>No batteries required</td></tr><tr><td>Material</td><td>Durable food-grade plastic, non-toxic</td></tr><tr><td>Safety</td><td>BIS-tested. Contains small parts and weights, adult supervision advised.</td></tr><tr><td>Age recommendation</td><td>3 years and up</td></tr><tr><td>Package contents</td><td>1 balance, 20 weights, 1 mascot, 10 number tiles, 30 cards</td></tr><tr><td>SKU</td><td>EKT3832</td></tr><tr><td>Note</td><td>1 pc, random mascot design shipped</td></tr></table></div></div></div>
    </div>
+  </div>
+ </div>
+</div></div>
+
+<div class="block" style="border-top:none;padding-top:6px"><div class="wrap">
+ <div class="shead"><span class="eyebrow">Frequently bought together</span><h2>Complete the set and save</h2><p>Parents who bought this usually grab these too.</p></div>
+ <div class="fbt">
+  <div class="bitems"><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_800x.jpg?v=1757594221" alt="Weigh &amp; Play Maths Balance"><b>Weigh &amp; Play Maths Balance</b><span>Rs.699</span></div><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_800x.jpg?v=1763818423" alt="Cordless Light-Up Learning Pen"><b>Cordless Light-Up Learning Pen</b><span>Rs.450</span></div><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT4011_1_929204de-cd8c-4a45-9564-1e5a16405727_800x.jpg?v=1772717154" alt="Multi Language Educational Phone"><b>Multi Language Educational Phone</b><span>Rs.538</span></div></div>
+  <div class="bsum">
+   <div class="bp"><span class="was">Rs.1687</span><span class="now">Rs.1487</span><span class="save">Save Rs.200</span></div>
+   <button class="btn btn-p" onclick="addBundle()">Add all 3 to cart</button>
   </div>
  </div>
 </div></div>
@@ -352,19 +415,13 @@ body.loading{overflow:hidden}
 </div></div>
 
 <div class="block"><div class="wrap">
- <div class="shead"><span class="eyebrow">Skills it builds</span><h2>Learning, disguised as play</h2></div>
- <div class="skills"><span>Maths</span><span>Counting</span><span>Balance</span><span>Logic</span></div>
+ <div class="shead"><span class="eyebrow">Loved by moms</span><h2>From our parent community</h2><p>Real love from the mums who shop with us.</p></div>
+ <div class="moms"><div class="mom"><p>"Finally a toy that keeps my daughter off the iPad. She actually asks to play with it after school."</p><div class="who"><div class="av">A</div><div><b>Ananya R.</b><span>Mum of a 4-year-old</span></div></div></div><div class="mom"><p>"Quality is lovely and it arrived in two days. You can tell it is made for small hands."</p><div class="who"><div class="av">P</div><div><b>Priya M.</b><span>Mum of twins</span></div></div></div><div class="mom"><p>"A friend recommended it and now I gift it at every birthday party in our building."</p><div class="who"><div class="av">S</div><div><b>Sneha K.</b><span>Mum of a 3-year-old</span></div></div></div></div>
 </div></div>
 
 <div class="block"><div class="wrap">
- <div class="shead"><span class="eyebrow">Bundle and save</span><h2>Upgrade your Toy Collection</h2><p>Three little wins in one box, for less than buying them on their own.</p></div>
- <div class="bundle">
-  <div class="bitems"><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_800x.jpg?v=1757594221" alt="Weigh &amp; Play Maths Balance"><b>Weigh &amp; Play Maths Balance</b><span>Rs.699</span></div><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT3566_2_6e723f7a-0650-45c1-be72-8d318eabd759_800x.jpg?v=1763818423" alt="Cordless Light-Up Learning Pen"><b>Cordless Light-Up Learning Pen</b><span>Rs.450</span></div><div class="bi"><img src="https://extrokids.com/cdn/shop/files/EKT4011_1_929204de-cd8c-4a45-9564-1e5a16405727_800x.jpg?v=1772717154" alt="Multi Language Educational Phone"><b>Multi Language Educational Phone</b><span>Rs.538</span></div></div>
-  <div class="bsum">
-   <div class="bp"><span class="was">Rs.1687</span><span class="now">Rs.1487</span><span class="save">Save Rs.200</span></div>
-   <button class="btn btn-p" onclick="addBundle()">Add all 3 to cart</button>
-  </div>
- </div>
+ <div class="shead"><span class="eyebrow">Skills and learning</span><h2>What your child builds</h2><p>Play that quietly grows real developmental skills.</p></div>
+ <div class="devskills"><div class="dsk"><b>STEM</b><span>Early maths and number sense through real balancing.</span></div><div class="dsk"><b>Problem-solving</b><span>Comparing, estimating and finding the balance point.</span></div><div class="dsk"><b>Cognitive</b><span>Counting, addition and pattern recognition.</span></div><div class="dsk"><b>Fine motor</b><span>Handling small weights, tiles and the balance arm.</span></div><div class="dsk"><b>Logic</b><span>Cause and effect kids can see and feel.</span></div><div class="dsk"><b>Confidence</b><span>Hands-on wins that make maths feel friendly.</span></div></div>
 </div></div>
 
 <div class="block"><div class="wrap"><div class="faqwrap">
@@ -393,6 +450,9 @@ body.loading{overflow:hidden}
  </div>
 </div>
 
+<a class="wa" href="https://wa.me/919999999999?text=Hi%20Extrokids%2C%20I%20have%20a%20question%20about%20EKT3832" target="_blank" rel="noopener">Chat on WhatsApp</a>
+<div class="zoomov" id="zoomov" onclick="closeZoom()"><img id="zoomimg" src="" alt="Zoomed product"></div>
+
 <div class="ov" id="ov" onclick="closeC()"></div>
 <aside class="drawer" id="drawer">
  <div class="dh"><h3>Your Cart</h3><button class="x" onclick="closeC()">Close</button></div>
@@ -402,10 +462,13 @@ body.loading{overflow:hidden}
 <div class="toast" id="toast"></div>
 
 <script>
-var PROD={"n": "Weigh & Play \u2014 Practical Maths Balance", "p": 699, "img": "https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221", "ekt": "EKT3832"};
+var PROD={"n": "Weigh & Play \u2014 Practical Maths Balance", "p": 699, "img": "https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221", "ekt": "EKT3832", "ageDefault": "3-6"};
 var IMGS=["https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_large.jpg?v=1757594221", "https://extrokids.com/cdn/shop/files/EKT3832_9_large.webp?v=1763442169", "https://extrokids.com/cdn/shop/files/EKT3832_2_c1d038ae-f622-4bf1-b5fb-96b9bad57e96_large.jpg?v=1763442169", "https://extrokids.com/cdn/shop/files/EKT3832_3_ce028135-5454-476b-ba18-963884b5643a_large.jpg?v=1763442169", "https://extrokids.com/cdn/shop/files/EKT3832_4_09693748-f3d6-4bfa-86a8-b1bf274516ee_large.jpg?v=1763442169", "https://extrokids.com/cdn/shop/files/EKT3832_5_8bc811d3-4449-4178-ba60-475ccb71ec49_large.jpg?v=1763442169"];
 var BUNDLE={"now": 1487, "save": 200, "img": "https://extrokids.com/cdn/shop/files/EKT3832_1_042c2a91-e95f-46c2-a081-e3bb6f0391b8_800x.jpg?v=1757594221"};
 var SEG=["5% OFF", "10% OFF", "TRY AGAIN", "15% OFF", "FREE SHIP", "20% OFF"];var spun=false;
+var REC={"n": "Multi Language Educational Phone", "p": 538, "img": "https://extrokids.com/cdn/shop/files/EKT4011_1_929204de-cd8c-4a45-9564-1e5a16405727_800x.jpg?v=1772717154", "ekt": "EKT4011"};
+var GIFTS={'1-3':{n:'A4 Puzzle Board (1 to 3 yrs)'},'3-6':{n:'A4 Puzzle Board (3 to 6 yrs)'}};
+var giftAge='3-6';
 var cart=[];
 function $(s){return document.querySelector(s);}
 var gi=0,gtimer=null;
@@ -445,17 +508,30 @@ function renderCart(){var b=$('#cbody');var cb=$('#cb');cb.textContent=cart.leng
  var ship='<div class="shipbar'+(done?' done':'')+'"><p>'+msg+'</p><div class="shiptrack"><i style="width:'+pct+'%"></i></div></div>';
  var grp={};cart.forEach(function(p){grp[p.ekt]=grp[p.ekt]||{p:p,q:0};grp[p.ekt].q++;});
  var rows=Object.keys(grp).map(function(k){var g=grp[k];return '<div class="ci"><img src="'+g.p.img+'" alt=""><div><b>'+g.p.n+'</b><span>Qty '+g.q+', Rs.'+(g.p.p*g.q)+'</span></div><button class="rm" onclick="rmAll(\''+k+'\')">Remove</button></div>';}).join('');
- b.innerHTML=ship+rows;$('#ctot').textContent='Rs.'+tot;}
+ var gift=GIFTS[giftAge]||GIFTS['3-6'];
+ var giftrow='<div class="cgift"><span>COMPLIMENTARY GIFT</span><b>'+gift.n+' — added free</b></div>';
+ var rec='';if(!cart.some(function(p){return p.ekt===REC.ekt;})){rec='<div class="crlabel">You might also need</div><div class="crec"><img src="'+REC.img+'" alt=""><div><b>'+REC.n+'</b><span class="pr">Rs.'+REC.p+'</span></div><button class="addrec" onclick="addRec()">Add</button></div>';}
+ var trust='<div class="cktrust"><span>Secure checkout</span><span>7-day returns</span><span>BIS-safe toys</span></div>';
+ b.innerHTML=ship+rows+giftrow+rec+trust;$('#ctot').textContent='Rs.'+tot;}
+function addRec(){cart.push({n:REC.n,p:REC.p,img:REC.img,ekt:REC.ekt});renderCart();bumpCart();toast2('Added: '+REC.n);}
+function updateGift(){var s=$('#agesel');if(s)giftAge=s.value;var gn=$('#giftnote');if(gn)gn.textContent='Free gift included: a complimentary A4 puzzle board ('+(giftAge==='1-3'?'1 to 3 yrs':'3 to 6 yrs')+') is added to your order.';if(cart.length)renderCart();}
+function openZoom(){var z=$('#zoomov');$('#zoomimg').src=$('#mainImg').src;z.classList.add('open');}
+function closeZoom(){$('#zoomov').classList.remove('open');}
 function rmAll(k){cart=cart.filter(function(p){return p.ekt!==k;});renderCart();}
 function checkout(){if(!cart.length){toast2('Cart is empty');return;}confetti();toast2('Order placed, level complete');cart=[];renderCart();closeC();}
 function confetti(){var W=['WIN','YAY','GO','NICE','PLAY'];for(var k=0;k<46;k++){(function(k){var c=document.createElement('div');c.textContent=W[k%5];c.style.cssText='position:fixed;left:'+(Math.random()*100)+'vw;top:-30px;z-index:130;font-family:Orbitron;font-weight:800;font-size:'+(10+Math.random()*10)+'px;color:'+['#FF4D9D','#16AEC9','#22B36A','#F2A100','#8B5CF6'][k%5]+';pointer-events:none';document.body.appendChild(c);c.animate([{transform:'translateY(0) rotate(0)',opacity:1},{transform:'translateY(110vh) rotate('+(Math.random()*720)+'deg)',opacity:.2}],{duration:2200+Math.random()*1400,easing:'ease-in'}).onfinish=function(){c.remove();};})(k);}}
-var END=Date.now()+(2*86400+Math.floor(Math.random()*8)*3600)*1000;
-function tick(){var d=Math.max(0,END-Date.now()),s=Math.floor(d/1000);
+var CDKEY='ek_cd_'+PROD.ekt;
+function cdEnd(){var now=Date.now();try{var v=localStorage.getItem(CDKEY);if(v){v=parseInt(v,10);if(v>now)return v;}var e=now+2*86400*1000;localStorage.setItem(CDKEY,e);return e;}catch(e){return now+2*86400*1000;}}
+var END=cdEnd();
+function tick(){var d=Math.max(0,END-Date.now());
+ if(d<=0){END=Date.now()+2*86400*1000;try{localStorage.setItem(CDKEY,END);}catch(e){}d=END-Date.now();}
+ var s=Math.floor(d/1000);
  var dd=Math.floor(s/86400),hh=Math.floor(s%86400/3600),mm=Math.floor(s%3600/60),ss=s%60;
  function p(n){return (n<10?'0':'')+n;}
  if($('#cdd')){$('#cdd').textContent=p(dd);$('#cdh').textContent=p(hh);$('#cdm').textContent=p(mm);$('#cds').textContent=p(ss);}}
 tick();setInterval(tick,1000);
 setActive(0);restart();
+var _as=$('#agesel');if(_as){_as.value=(PROD.ageDefault||'3-6');}updateGift();
 renderCart();
 function startTW(){var el=document.getElementById('twout');if(!el||el.dataset.done)return;el.dataset.done='1';
  var p=document.getElementById('tw');var txt=p?p.getAttribute('data-text'):'';
