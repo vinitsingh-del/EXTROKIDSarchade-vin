@@ -373,6 +373,16 @@ html{scroll-behavior:smooth}
 .cbinput button{font-family:'Orbitron';font-weight:800;font-size:.76rem;color:#fff;background:var(--purple);border:none;border-radius:10px;padding:0 14px;cursor:pointer}
 @media(max-width:860px){.cbot{bottom:86px}.cbotpanel{bottom:138px}}
 @media(max-width:600px){.block{padding:34px 0}.wrap{padding:0 18px}.shead{margin-bottom:22px}}
+
+/* QA3: hero containment, FBT symmetry, centered sections */
+.gmain img{object-fit:contain;padding:12px;background:#fff}
+@media(hover:hover){.gmain:hover img{transform:scale(1.05)}}
+.carousel>*:first-child{margin-left:auto}
+.carousel>*:last-child{margin-right:auto}
+.carousel .bi{width:200px}
+.bitems.carousel{gap:16px}
+.bi{display:flex;flex-direction:column}
+.bi .bname{flex:1}
 </style></head><body class="loading">
 
 <div class="boot" id="boot">
