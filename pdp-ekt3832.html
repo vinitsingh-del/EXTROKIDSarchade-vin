@@ -414,6 +414,13 @@ html{scroll-behavior:smooth}
  .fbt .bitems.carousel>*{flex:1 1 0;width:auto;margin-left:0;margin-right:0}
  .fbt .bitems.carousel{overflow:visible;justify-content:center}
 }
+
+/* QA6: hero pinned within viewport while buy column scrolls (desktop only) */
+@media(min-width:861px){
+ .gallery{position:sticky;top:86px;align-self:start}
+ .heroframe{max-width:min(100%,calc(100vh - 260px));margin:0}
+ .thumbs{max-width:min(100%,calc(100vh - 260px))}
+}
 </style></head><body class="loading">
 
 <div class="boot" id="boot">
