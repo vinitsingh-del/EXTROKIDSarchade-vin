@@ -443,6 +443,10 @@ html{scroll-behavior:smooth}
 @media(min-width:1600px){.wrap{max-width:1440px}}
 @media(min-width:2200px){.wrap{max-width:1600px}}
 @media(min-width:3000px){.wrap{max-width:1600px}}
+
+/* QA8: sticky bar hides while native CTAs are on screen */
+.sticky{transition:transform .3s ease,opacity .3s ease}
+.sticky.hidebar{transform:translateY(120%);opacity:0;pointer-events:none}
 </style></head><body class="loading">
 
 <div class="boot" id="boot">
@@ -728,5 +732,10 @@ function botReply(q){q=(q||'').toLowerCase();
  if(/gift/.test(q))return 'A complimentary A4 puzzle board is auto-added based on your child age.';
  if(/^hi|hello|hey/.test(q))return 'Hi! Ask me about shipping, returns, age fit, offers or payments.';
  return 'I can help with shipping, returns, age fit, offers and payments. Try one of the quick options below.';}
+
+(function(){var ct=document.querySelector('.ctas'),sb=document.querySelector('.sticky');
+ if(!ct||!sb||!('IntersectionObserver' in window))return;
+ var io=new IntersectionObserver(function(es){es.forEach(function(en){sb.classList.toggle('hidebar',en.isIntersecting);});},{threshold:.2});
+ io.observe(ct);})();
 </script>
 </body></html>
